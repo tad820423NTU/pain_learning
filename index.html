@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f5f3ed">
+<meta name="description" content="疼痛專科互動學習室，依主題選擇 CRPS、PHN、Pain neurobiology，四階段深入醫學機轉與臨床思考。">
 <title>Pain Study Room｜疼痛專科互動學習室</title>
 <style>
 :root{color-scheme:light;--paper:#f6f5f0;--white:#fff;--ink:#243042;--muted:#687588;--navy:#253f55;--navy2:#36566b;--accent:#d9b78f;--sage:#e9f1e9;--sage-ink:#50715c;--blue:#e9f0f6;--line:#e0e5e7;--shadow:0 16px 45px rgba(40,56,65,.075);--radius:24px}
@@ -44,18 +45,105 @@
 .stage:focus-visible,.hero-flow span:focus-visible,.btn:focus-visible{outline:3px solid #d7b894;outline-offset:2px}
 @media(max-width:720px){.hero-flow,.stage-nav{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-flow span{min-height:56px}.stage{min-height:45px}}
 @media(max-width:430px){.hero{padding:22px 18px}.hero-flow{gap:8px}.hero-flow span{font-size:12px;padding:10px 7px}.stage-nav{padding:12px 15px;gap:7px}.stage{font-size:11px;padding:8px 4px}}
+
+/* v1.1 — real topic homepage, with original guided reading untouched */
+[hidden]{display:none!important}
+.home-view{padding:8px 0 12px}
+.home-hero{position:relative;background:#fff;border:1px solid var(--line);border-radius:26px;padding:44px 46px 39px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(230px,.72fr);gap:34px;align-items:center;overflow:hidden;box-shadow:var(--shadow)}
+.home-hero:before{content:"";position:absolute;width:300px;height:300px;right:-170px;top:-158px;border-radius:50%;background:#edf3f0;pointer-events:none}
+.home-kicker{font-size:11px;letter-spacing:.19em;color:#62877f;font-weight:850;margin:0 0 12px}
+.home-hero h2{font-size:clamp(30px,3.4vw,49px);letter-spacing:-.045em;color:#233e4e;line-height:1.32;margin:0 0 15px;font-weight:800}
+.home-hero h2 span{color:#628579}
+.home-hero p.home-description{color:#647382;font-size:15px;line-height:1.9;max-width:590px;margin:0 0 19px}
+.home-hero-side{position:relative;z-index:1;background:#f3f6f2;border-radius:18px;padding:26px 26px 23px;border:1px solid #e1ebe5}
+.home-hero-side .count{display:block;font-family:Georgia,serif;font-size:43px;line-height:1.1;color:#335c5d}
+.home-hero-side h3{font-size:17px;color:#2b5260;margin:3px 0 12px}
+.home-hero-side p{font-size:13px;color:#6f807d;margin:0;line-height:1.8}
+.home-hero-side .tiny-line{height:1px;background:#dce7df;margin:17px 0}
+.home-section{margin-top:31px}
+.home-section-heading{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:16px}
+.home-section-heading h2{font-size:24px;line-height:1.3;margin:0;color:#294656;letter-spacing:-.025em}
+.home-section-heading p{margin:3px 0 0;font-size:13px;color:#82919b}
+.home-featured{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.featured-card{background:#fff;border:1px solid #dbe6e2;border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:9px;box-shadow:var(--shadow);min-height:246px}
+.featured-card h3{font-size:22px;line-height:1.35;color:#264655;margin:4px 0 0}
+.featured-card p{color:#6f7d88;font-size:13px;line-height:1.75;margin:0 0 12px}
+.featured-card .feature-top{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.featured-card .feature-eyebrow{color:#658a7d;font-size:11px;letter-spacing:.1em;font-weight:800}
+.featured-card .feature-pill{font-size:11px;border-radius:30px;padding:4px 9px;background:#e7f1ea;color:#496b57}
+.featured-card .feature-action{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.featured-card .feature-action button{background:#2e5263;color:white;border:0;padding:10px 17px;border-radius:11px;font-weight:800;font-size:13px}
+.featured-card .feature-action button:hover{background:#3a6878}
+.featured-card .feature-action small{color:#84939d;font-size:11px;white-space:nowrap}
+.home-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.home-step{background:#eef3f0;border:1px solid #dae5dc;border-radius:16px;padding:19px 12px 17px;text-align:center;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;min-height:119px}
+.home-step .no{font-family:Georgia,serif;font-size:19px;color:#6d9a8a}
+.home-step strong{font-size:15px;color:#294e58}
+.home-step small{font-size:11px;color:#788e88}
+.home-library{margin-top:32px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:25px 27px;box-shadow:var(--shadow)}
+.home-tool-row{display:flex;align-items:center;gap:12px;margin:17px 0 12px}
+.home-search{background:#f8faf8;border:1px solid #dae5e0;border-radius:12px;padding:12px 14px;min-width:200px;width:100%;color:var(--ink);font-size:14px}
+.home-filter-row{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 17px}
+.home-library .topic-card{box-shadow:none}
+.home-library .topic-card h3{font-size:16px}
+.home-meta{padding:19px 2px 7px;color:#7c8b93;font-size:12px;line-height:1.8}
+body.at-home #homeOpen,body.at-home #libraryOpen{display:none}
+@media(max-width:930px){.home-hero{grid-template-columns:1fr;gap:20px}.home-featured{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.home-hero{padding:27px 25px}.home-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.home-library{padding:22px 17px}.home-featured{grid-template-columns:1fr}}
+@media(max-width:590px){.header{flex-wrap:wrap}.head-actions{justify-content:flex-end;flex-wrap:wrap}.home-hero h2{font-size:33px}.home-hero-side{padding:18px 20px}.home-section-heading h2{font-size:21px}.home-steps{gap:8px}.home-step{padding:15px 7px;min-height:100px}.home-step strong{font-size:13px}.home-step small{font-size:10px}.home-library .catalog-grid{grid-template-columns:1fr}.home-section{margin-top:24px}}
+@media(max-width:430px){.home-hero{padding:24px 19px}.home-hero h2{font-size:29px}.header .brand h1{font-size:13px}.header .brand p{font-size:11px}.feature-action{flex-wrap:wrap}}
+
 </style>
 </head>
 <body>
 <div class="topline"></div>
 <div class="shell">
-<header class="header"><div class="brand"><div class="brand-mark">P</div><div><h1>PAIN STUDY ROOM</h1><p>疼痛專科｜互動式深度學習</p></div></div><div class="head-actions"><button class="btn-sm" id="libraryOpen">全部學習主題 ▦</button><span class="badge">先學會，再練習</span><button class="btn-sm" id="glossaryOpen">術語字典 ↗</button></div></header>
+<header class="header"><div class="brand"><div class="brand-mark">P</div><div><h1>PAIN STUDY ROOM</h1><p>疼痛專科｜互動式深度學習</p></div></div><div class="head-actions"><button class="btn-sm" id="homeOpen">主題首頁</button><button class="btn-sm" id="libraryOpen">全部學習主題 ▦</button><span class="badge">先學會，再練習</span><button class="btn-sm" id="glossaryOpen">術語字典 ↗</button></div></header>
+<main id="homeView" class="home-view" aria-label="主題首頁">
+  <section class="home-hero" aria-labelledby="welcomeTitle">
+    <div>
+      <div class="home-kicker">PAIN MEDICINE · GUIDED LEARNING</div>
+      <h2 id="welcomeTitle">醫學可以讀得很深，<br><span>也可以學得很從容。</span></h2>
+      <p class="home-description">選擇今天想理解的主題。每一章都從概念開始，逐步深入 mechanism、clinical reasoning，再整理真正記得住的知識。不需要一開始就做考題。</p>
+      <button class="btn primary" id="exploreTopics" type="button">瀏覽全部學習主題 ↓</button>
+    </div>
+    <aside class="home-hero-side" aria-label="學習室摘要">
+      <span class="count" id="homeReadyCount">3</span>
+      <h3>個可立即學習的主題</h3>
+      <p>CRPS、PHN 與 Pain neurobiology 已有互動教材。其他主題會依同一套醫學品質規格逐步完成。</p>
+      <div class="tiny-line"></div>
+      <p>這裡沒有進度排行榜。選一個單元，理解一個概念，就有進展。</p>
+    </aside>
+  </section>
+  <section class="home-section" aria-labelledby="featuredHeading">
+    <div class="home-section-heading"><div><h2 id="featuredHeading">從這裡開始學習</h2><p>目前已開放的完整導讀及基礎課程</p></div></div>
+    <div class="home-featured" id="homeFeatured"></div>
+  </section>
+  <section class="home-section" aria-labelledby="flowHeading">
+    <div class="home-section-heading"><div><h2 id="flowHeading">每一章，跟著同一個節奏</h2><p>先閱讀，再理解，最後才能真正運用</p></div></div>
+    <div class="home-steps" aria-label="四階段學習流程">
+      <div class="home-step"><span class="no">01</span><strong>認識概念</strong><small>建立醫學基本架構</small></div>
+      <div class="home-step"><span class="no">02</span><strong>理解機轉</strong><small>從分子到神經網絡</small></div>
+      <div class="home-step"><span class="no">03</span><strong>臨床連結</strong><small>用病例推導判斷</small></div>
+      <div class="home-step"><span class="no">04</span><strong>自我整理</strong><small>帶走真正理解的知識</small></div>
+    </div>
+  </section>
+  <section class="home-library" id="topics" aria-labelledby="catalogHeading">
+    <div class="home-section-heading"><div><h2 id="catalogHeading">全部學習主題</h2><p>可學習的主題可以直接進入，規劃中的主題會清楚標示</p></div><span class="badge" id="homeCatalogCount">26 主題</span></div>
+    <div class="home-tool-row"><input id="homeSearch" class="home-search" type="search" placeholder="搜尋 CRPS、PHN、神經叢、facet pain……" aria-label="搜尋學習主題"></div>
+    <div id="homeFilters" class="home-filter-row" aria-label="主題分類"></div>
+    <div id="homeCatalog"></div>
+  </section>
+  <div class="home-meta">公開試讀版｜重要數值已進行部分來源交叉查核，完整臨床與藥物內容仍持續審查。本網站供醫學教育，不取代臨床診斷與處方；閱讀進度保存在自己的瀏覽器內。</div>
+</main>
+<div id="lessonView" hidden>
 <section class="hero"><div><div class="eyebrow" id="heroEyebrow">GUIDED LEARNING · PAIN MEDICINE</div><h2 id="heroTitle">CRPS，不再一次讀兩萬字。</h2><p>從 Notion 完整教材與正式考試範圍出發，把疼痛醫學拆成可以消化的學習段落。每次只聚焦一個概念，先讀原理，再看臨床連結，最後才整理知識。沒有倒數計時，也不會強迫你先做題目。</p></div><div class="hero-flow"><span>① 認識概念 <b>→</b></span><span>② 理解機轉 <b>→</b></span><span>③ 臨床連結 <b>→</b></span><span>④ 自我整理</span></div></section>
 <div class="progress-strip"><div class="progress-copy"><strong id="progressNum">0 / 12</strong>單元已閱讀</div><div class="progress-track" role="progressbar" aria-label="學習進度" aria-valuemin="0" aria-valuemax="12" aria-valuenow="0" id="progressTrack"><div class="progress-bar" id="progressBar"></div></div><button class="btn-sm" id="resetProgress">重設進度</button></div>
 <div class="layout" id="public-lessons"><nav class="sidebar" aria-label="學習章節"><div class="side-title" id="sideTitle">學習目錄 · 12 MODULES</div><div id="navList"></div><div class="sidenote">每個章節分成四小段。只要按「繼續閱讀」就能循序學習。你的進度與筆記會保存在這台裝置的瀏覽器中。</div></nav>
 <main class="main"><article class="paper" aria-live="polite"><div class="paper-head"><div class="crumb" id="crumb">MODULE 01 / 12</div><h2 id="chapterTitle">CRPS 是什麼？</h2><div class="en" id="chapterEn">Definition & Classification</div><div class="paper-sub" id="chapterSub"></div></div><div class="stage-nav" id="stageNav"></div><div class="paper-body"><div class="stage-eyebrow" id="stageEyebrow"></div><div class="question" id="stageQuestion"></div><div class="reading" id="stageContent"></div></div><div class="foot-actions"><button class="btn secondary" id="backBtn">← 上一段</button><div class="foot-note" id="stageCount"></div><button class="btn primary" id="nextBtn">繼續閱讀 →</button></div></article>
 <div class="notes"><div class="note-head"><h3>我的理解筆記</h3><span>寫一句你真正理解的話，就足夠。</span></div><textarea id="noteInput" placeholder="例如：CRPS 的 Type I / II 跟 sympathetic block 反應其實是不同分類……"></textarea></div></main></div>
 <div class="bottom" id="sourceFooter">本學習室以 Bonica 第五版、IASP 與原始文獻為基礎。互動學習不取代完整專業參考書或個別病人診療；閱讀進度僅存在你的瀏覽器中。</div>
+</div>
 </div>
 <div class="library-back" id="libraryBack" role="dialog" aria-modal="true" aria-label="疼痛專科主題圖書館"><div class="library-window"><div class="modal-top"><div><h2>疼痛專科學習圖書館</h2><p>先選主題、再循序學習。CRPS、PHN 與疼痛機轉已有導讀；其他條目先保留 Notion 入口或列為待建置。</p></div><button class="close" id="libraryClose" aria-label="關閉主題圖書館">×</button></div><input class="search" id="librarySearch" placeholder="搜尋 PHN、神經叢、central sensitization、癌症疼痛……"><div class="library-filters" id="libraryFilters"></div><div id="catalogList"></div><p class="library-note">補充：你提供的 Manus 題庫網站目前無法直接讀取完整題目，所以這裡的延伸考點來自台灣疼痛醫學會公布的訓練範圍與公開考古題，並非聲稱已匯入 Manus 題庫。</p></div></div><div class="glossary-back" id="glossaryBack" role="dialog" aria-modal="true" aria-label="醫學術語字典"><div class="modal"><div class="modal-top"><div><h2>醫學術語字典</h2><p>保留英文專業術語，中文協助理解。可以搜尋。</p></div><button class="close" id="glossaryClose" aria-label="關閉">×</button></div><input class="search" id="termSearch" placeholder="輸入 central sensitization、allodynia……"><div id="termResults"></div></div></div>
 <script>
@@ -275,11 +363,62 @@ function closeLibrary(){el('libraryBack').classList.remove('open')}
 function openLibrary(){el('libraryBack').classList.add('open');el('librarySearch').value='';drawCatalog();el('librarySearch').focus()}
 let catalogFilter='全部';
 function drawCatalog(){const q=el('librarySearch').value.trim().toLowerCase();const groups=['全部','疾病','解剖','藥理','制度','基礎','延伸'];el('libraryFilters').innerHTML=groups.map(g=>`<button type="button" data-group="${g}" class="filter-pill ${g===catalogFilter?'active':''}">${g}</button>`).join('');let data=catalog.filter(t=>(catalogFilter==='全部'||t.group===catalogFilter)&&[t.title,t.subtitle,t.group].join(' ').toLowerCase().includes(q));el('catalogList').innerHTML=data.length?`<div class="catalog-grid">${data.map(t=>`<div class="topic-card ${t.ready?'live':''}"><div class="topic-top"><span class="topic-group">${t.group}</span><span class="topic-status ${t.ready?'is-live':''}">${t.ready?'可立即學習':'規劃中'}</span></div><h3>${t.title}</h3><p>${t.subtitle}</p><div class="topic-actions">${t.ready?`<button class="btn primary" data-topic="${t.id}">進入互動教學</button>`:''}${t.url?`<a class="btn secondary" href="${t.url}" target="_blank" rel="noopener">Notion 原始篇章 ↗</a>`:''}${!t.ready&&!t.url?'<span class="topic-pending">依正式考試範圍列為待建置</span>':''}</div></div>`).join('')}</div>`:'<p>目前找不到符合的學習主題。</p>'}
-function selectTopic(id){if(!topicModules[id])return;save();activeTopicId=id;modules=topicModules[id];key=id==='crps'?'pain-study-room-crps-v1':`pain-study-room-${id}-v3`;store={done:[],steps:{},notes:{}};try{store={...store,...safeParse(localStorage.getItem(key),{})}}catch(e){};current=Number.isInteger(Number(store.current))&&Number(store.current)>=0&&Number(store.current)<modules.length?Number(store.current):0;step=0;let meta=topicMeta[id];el('heroTitle').textContent=meta.title;el('heroEyebrow').textContent=`${id.toUpperCase()} · GUIDED LEARNING`;el('sourceFooter').innerHTML=`${meta.note}　${meta.notion?`<a href="${meta.notion}" target="_blank" rel="noopener">Notion 原始篇章 ↗</a>`:''}<br>資料供疼痛醫學學習，不取代個別病人處方及臨床評估。進度只儲存在目前瀏覽器中。正式公開試讀版：重大研究數字已有來源交叉核對，臨床處置內容仍持續接受專業審閱。`;closeLibrary();render();window.scrollTo({top:0,behavior:'smooth'});}
+function selectTopic(id,opts={}){if(!topicModules[id])return;save();activeTopicId=id;modules=topicModules[id];key=id==='crps'?'pain-study-room-crps-v1':`pain-study-room-${id}-v3`;store={done:[],steps:{},notes:{}};try{store={...store,...safeParse(localStorage.getItem(key),{})}}catch(e){};current=Number.isInteger(Number(store.current))&&Number(store.current)>=0&&Number(store.current)<modules.length?Number(store.current):0;step=0;el('homeView').hidden=true;el('lessonView').hidden=false;document.body.classList.remove('at-home');let meta=topicMeta[id];el('heroTitle').textContent=meta.title;el('heroEyebrow').textContent=`${id.toUpperCase()} · GUIDED LEARNING`;el('sourceFooter').innerHTML=`${meta.note}　${meta.notion?`<a href="${meta.notion}" target="_blank" rel="noopener">Notion 原始篇章 ↗</a>`:''}<br>資料供疼痛醫學學習，不取代個別病人處方及臨床評估。進度只儲存在目前瀏覽器中。正式公開試讀版：重大研究數字已有來源交叉核對，臨床處置內容仍持續接受專業審閱。`;closeLibrary();render();document.title=`${catalog.find(x=>x.id===id)?.title||'Pain Study Room'}｜Pain Study Room`;if(!opts.fromRoute&&location.hash!==`#/topic/${id}`)location.hash=`/topic/${id}`;window.scrollTo({top:0,behavior:'smooth'});}
 el('libraryOpen').onclick=openLibrary;el('libraryClose').onclick=closeLibrary;el('libraryBack').addEventListener('click',e=>{if(e.target===el('libraryBack'))closeLibrary()});el('librarySearch').addEventListener('input',drawCatalog);el('libraryFilters').addEventListener('click',e=>{const btn=e.target.closest('[data-group]');if(btn){catalogFilter=btn.dataset.group;drawCatalog()}});el('catalogList').addEventListener('click',e=>{const btn=e.target.closest('[data-topic]');if(btn)selectTopic(btn.dataset.topic)});
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLibrary()});
 
-render();
+
+// Topic homepage and deep links. Other topic content stays unchanged.
+let homeFilter='全部';
+const homeGroups=['全部','疾病','解剖','藥理','制度','基礎','延伸'];
+function homeProgress(id){
+  const storageKey=id==='crps'?'pain-study-room-crps-v1':`pain-study-room-${id}-v3`;
+  let data={};try{data=safeParse(localStorage.getItem(storageKey),{})||{}}catch(e){}
+  const count=Array.isArray(data.done)?new Set(data.done.filter(Number.isInteger)).size:0;
+  const total=(topicModules[id]||[]).length;
+  return {count:Math.min(count,total),total};
+}
+function renderHome(){
+  const ids=['crps','phn','basics'];
+  el('homeReadyCount').textContent=String(catalog.filter(t=>t.ready&&topicModules[t.id]).length);
+  el('homeCatalogCount').textContent=`${catalog.length} 個主題`;
+  el('homeFeatured').innerHTML=ids.map(id=>{
+    const t=catalog.find(t=>t.id===id);if(!t)return '';
+    const p=homeProgress(id);
+    const label=p.count>0?`${p.count} / ${p.total} 單元已閱讀`:`${p.total} 個互動單元`;
+    return `<article class="featured-card"><div class="feature-top"><span class="feature-eyebrow">${t.group.toUpperCase()} · GUIDED STUDY</span><span class="feature-pill">可立即學習</span></div><h3>${t.title}</h3><p>${t.subtitle}<br>四階段循序閱讀，保留你自己的學習進度。</p><div class="feature-action"><button type="button" data-home-topic="${id}" aria-label="開始學習 ${t.title}">${p.count?'繼續閱讀':'開始學習'} →</button><small>${label}</small></div></article>`;
+  }).join('');
+  drawHomeCatalog();
+}
+function drawHomeCatalog(){
+  const q=el('homeSearch').value.trim().toLowerCase();
+  el('homeFilters').innerHTML=homeGroups.map(g=>`<button type="button" class="filter-pill ${g===homeFilter?'active':''}" data-home-group="${g}" aria-pressed="${g===homeFilter}">${g}</button>`).join('');
+  const items=catalog.filter(t=>(homeFilter==='全部'||t.group===homeFilter)&&[t.title,t.subtitle,t.group].join(' ').toLowerCase().includes(q));
+  el('homeCatalog').innerHTML=items.length?`<div class="catalog-grid">${items.map(t=>{
+    const ready=t.ready&&Boolean(topicModules[t.id]);
+    const p=ready?homeProgress(t.id):null;
+    return `<article class="topic-card ${ready?'live':''}"><div class="topic-top"><span class="topic-group">${t.group}</span><span class="topic-status ${ready?'is-live':''}">${ready?'可以學習':'規劃中'}</span></div><h3>${t.title}</h3><p>${t.subtitle}</p><div class="topic-actions">${ready?`<button type="button" class="btn primary" data-home-topic="${t.id}">進入教材 · ${p.count}/${p.total}</button>`:'<span class="topic-pending">教材尚在製作與驗證中</span>'}</div></article>`;
+  }).join('')}</div>`:'<p style="color:#788a95;padding:16px 3px">這個分類暫時找不到符合的主題。</p>';
+}
+function showHome(opts={}){
+  save();closeLibrary();el('lessonView').hidden=true;el('homeView').hidden=false;
+  document.body.classList.add('at-home');document.title='Pain Study Room｜疼痛專科互動學習室';
+  renderHome();
+  if(!opts.fromRoute&&location.hash!=='#/')location.hash='/';
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function routeByHash(){
+  const match=location.hash.match(/^#\/topic\/([a-z0-9-]+)$/);
+  if(match&&topicModules[match[1]])selectTopic(match[1],{fromRoute:true});
+  else showHome({fromRoute:true});
+}
+el('homeView').addEventListener('click',e=>{const topic=e.target.closest('[data-home-topic]');if(topic)selectTopic(topic.dataset.homeTopic);const group=e.target.closest('[data-home-group]');if(group){homeFilter=group.dataset.homeGroup;drawHomeCatalog();}});
+el('homeSearch').addEventListener('input',drawHomeCatalog);
+el('homeOpen').addEventListener('click',()=>showHome());
+el('exploreTopics').addEventListener('click',()=>el('topics').scrollIntoView({behavior:'smooth',block:'start'}));
+window.addEventListener('hashchange',routeByHash);
+
+routeByHash();
 </script>
 </body>
 </html>
