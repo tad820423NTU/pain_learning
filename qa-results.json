@@ -1,134 +1,275 @@
 {
-  "testing_date": "2026-11-05",
-  "runner": "Playwright / Chromium (local smoke test)",
-  "scope": "interactive website behavior and limited static checks",
+  "date": "2026-11-05",
+  "scope": "Homepage+existing course browser regression, 1440/768/390px; in-memory localStorage shim on about:blank testing environment.",
+  "passed": 66,
+  "failed": 0,
   "checks": [
     {
-      "check": "desktop hero 4 steps layout",
+      "check": "desktop: landing visible",
       "pass": true
     },
     {
-      "check": "desktop stage 4 equal columns",
+      "check": "desktop: three available courses",
       "pass": true
     },
     {
-      "check": "desktop hero equal width",
+      "check": "desktop: 26 catalog topics",
       "pass": true
     },
     {
-      "check": "desktop CRPS has 12 modules",
+      "check": "desktop: exactly 23 planned topics",
       "pass": true
     },
     {
-      "check": "desktop CRPS mechanism button count",
+      "check": "desktop: four-step balanced layout",
       "pass": true
     },
     {
-      "check": "desktop CRPS central mechanism opens",
+      "check": "desktop: home-step equal widths",
       "pass": true
     },
     {
-      "check": "desktop library opens",
+      "check": "desktop: case-insensitive search",
       "pass": true
     },
     {
-      "check": "desktop PHN has 13 modules",
+      "check": "desktop: anatomy filter",
       "pass": true
     },
     {
-      "check": "desktop PHN mechanism button count",
+      "check": "desktop: open CRPS and hide home",
       "pass": true
     },
     {
-      "check": "desktop PHN central mechanism opens",
+      "check": "desktop: CRPS 12 modules",
       "pass": true
     },
     {
-      "check": "desktop no horizontal viewport overflow",
+      "check": "desktop: six CRPS mechanisms",
       "pass": true
     },
     {
-      "check": "desktop no browser JS errors",
+      "check": "desktop: CRPS mechanism detail",
       "pass": true
     },
     {
-      "check": "desktop successful fresh load",
+      "check": "desktop: return home",
       "pass": true
     },
     {
-      "check": "mobile hero 4 steps layout",
+      "check": "desktop: original notes key survives",
       "pass": true
     },
     {
-      "check": "mobile stage 4 equal columns",
+      "check": "desktop: PHN shareable hash route",
       "pass": true
     },
     {
-      "check": "mobile hero equal width",
+      "check": "desktop: six PHN mechanisms",
       "pass": true
     },
     {
-      "check": "mobile CRPS has 12 modules",
+      "check": "desktop: PHN mechanism detail",
       "pass": true
     },
     {
-      "check": "mobile CRPS mechanism button count",
+      "check": "desktop: basics 4 guided modules",
       "pass": true
     },
     {
-      "check": "mobile CRPS central mechanism opens",
+      "check": "desktop: no horizontal overflow",
       "pass": true
     },
     {
-      "check": "mobile library opens",
+      "check": "desktop: zero JS runtime errors",
       "pass": true
     },
     {
-      "check": "mobile PHN has 13 modules",
+      "check": "tablet: landing visible",
       "pass": true
     },
     {
-      "check": "mobile PHN mechanism button count",
+      "check": "tablet: three available courses",
       "pass": true
     },
     {
-      "check": "mobile PHN central mechanism opens",
+      "check": "tablet: 26 catalog topics",
       "pass": true
     },
     {
-      "check": "mobile no horizontal viewport overflow",
+      "check": "tablet: exactly 23 planned topics",
       "pass": true
     },
     {
-      "check": "mobile no browser JS errors",
+      "check": "tablet: four-step balanced layout",
       "pass": true
     },
     {
-      "check": "mobile successful fresh load",
+      "check": "tablet: home-step equal widths",
       "pass": true
     },
     {
-      "check": "no private Notion page ids",
+      "check": "tablet: case-insensitive search",
       "pass": true
     },
     {
-      "check": "no patient information or personal identifier",
+      "check": "tablet: anatomy filter",
       "pass": true
     },
     {
-      "check": "medical disclosures present",
+      "check": "tablet: open CRPS and hide home",
       "pass": true
     },
     {
-      "check": "citation DOI anchors exist",
+      "check": "tablet: CRPS 12 modules",
       "pass": true
     },
     {
-      "check": "no external JS dependency",
+      "check": "tablet: six CRPS mechanisms",
+      "pass": true
+    },
+    {
+      "check": "tablet: CRPS mechanism detail",
+      "pass": true
+    },
+    {
+      "check": "tablet: return home",
+      "pass": true
+    },
+    {
+      "check": "tablet: original notes key survives",
+      "pass": true
+    },
+    {
+      "check": "tablet: PHN shareable hash route",
+      "pass": true
+    },
+    {
+      "check": "tablet: six PHN mechanisms",
+      "pass": true
+    },
+    {
+      "check": "tablet: PHN mechanism detail",
+      "pass": true
+    },
+    {
+      "check": "tablet: basics 4 guided modules",
+      "pass": true
+    },
+    {
+      "check": "tablet: no horizontal overflow",
+      "pass": true
+    },
+    {
+      "check": "tablet: zero JS runtime errors",
+      "pass": true
+    },
+    {
+      "check": "mobile: landing visible",
+      "pass": true
+    },
+    {
+      "check": "mobile: three available courses",
+      "pass": true
+    },
+    {
+      "check": "mobile: 26 catalog topics",
+      "pass": true
+    },
+    {
+      "check": "mobile: exactly 23 planned topics",
+      "pass": true
+    },
+    {
+      "check": "mobile: four-step balanced layout",
+      "pass": true
+    },
+    {
+      "check": "mobile: home-step equal widths",
+      "pass": true
+    },
+    {
+      "check": "mobile: case-insensitive search",
+      "pass": true
+    },
+    {
+      "check": "mobile: anatomy filter",
+      "pass": true
+    },
+    {
+      "check": "mobile: open CRPS and hide home",
+      "pass": true
+    },
+    {
+      "check": "mobile: CRPS 12 modules",
+      "pass": true
+    },
+    {
+      "check": "mobile: six CRPS mechanisms",
+      "pass": true
+    },
+    {
+      "check": "mobile: CRPS mechanism detail",
+      "pass": true
+    },
+    {
+      "check": "mobile: return home",
+      "pass": true
+    },
+    {
+      "check": "mobile: original notes key survives",
+      "pass": true
+    },
+    {
+      "check": "mobile: PHN shareable hash route",
+      "pass": true
+    },
+    {
+      "check": "mobile: six PHN mechanisms",
+      "pass": true
+    },
+    {
+      "check": "mobile: PHN mechanism detail",
+      "pass": true
+    },
+    {
+      "check": "mobile: basics 4 guided modules",
+      "pass": true
+    },
+    {
+      "check": "mobile: no horizontal overflow",
+      "pass": true
+    },
+    {
+      "check": "mobile: zero JS runtime errors",
+      "pass": true
+    },
+    {
+      "check": "static: no private Notion page URLs",
+      "pass": true
+    },
+    {
+      "check": "static: public preview medical disclaimer",
+      "pass": true
+    },
+    {
+      "check": "static: DOI source links",
+      "pass": true
+    },
+    {
+      "check": "static: no remote JS dependency",
+      "pass": true
+    },
+    {
+      "check": "static: 4 learning stages preserved",
+      "pass": true
+    },
+    {
+      "check": "static: no user identifiable string",
       "pass": true
     }
   ],
-  "passed": 31,
-  "failed": 0,
-  "medical_full_review_completed": false
+  "full_medical_review_completed": false,
+  "live_pages_browser_check_completed": false,
+  "note": "All 66 named checks were observed to pass locally. localStorage persistence across actual GitHub Pages browser refresh remains for live manual validation."
 }
