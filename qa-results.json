@@ -1,0 +1,134 @@
+{
+  "testing_date": "2026-11-05",
+  "runner": "Playwright / Chromium (local smoke test)",
+  "scope": "interactive website behavior and limited static checks",
+  "checks": [
+    {
+      "check": "desktop hero 4 steps layout",
+      "pass": true
+    },
+    {
+      "check": "desktop stage 4 equal columns",
+      "pass": true
+    },
+    {
+      "check": "desktop hero equal width",
+      "pass": true
+    },
+    {
+      "check": "desktop CRPS has 12 modules",
+      "pass": true
+    },
+    {
+      "check": "desktop CRPS mechanism button count",
+      "pass": true
+    },
+    {
+      "check": "desktop CRPS central mechanism opens",
+      "pass": true
+    },
+    {
+      "check": "desktop library opens",
+      "pass": true
+    },
+    {
+      "check": "desktop PHN has 13 modules",
+      "pass": true
+    },
+    {
+      "check": "desktop PHN mechanism button count",
+      "pass": true
+    },
+    {
+      "check": "desktop PHN central mechanism opens",
+      "pass": true
+    },
+    {
+      "check": "desktop no horizontal viewport overflow",
+      "pass": true
+    },
+    {
+      "check": "desktop no browser JS errors",
+      "pass": true
+    },
+    {
+      "check": "desktop successful fresh load",
+      "pass": true
+    },
+    {
+      "check": "mobile hero 4 steps layout",
+      "pass": true
+    },
+    {
+      "check": "mobile stage 4 equal columns",
+      "pass": true
+    },
+    {
+      "check": "mobile hero equal width",
+      "pass": true
+    },
+    {
+      "check": "mobile CRPS has 12 modules",
+      "pass": true
+    },
+    {
+      "check": "mobile CRPS mechanism button count",
+      "pass": true
+    },
+    {
+      "check": "mobile CRPS central mechanism opens",
+      "pass": true
+    },
+    {
+      "check": "mobile library opens",
+      "pass": true
+    },
+    {
+      "check": "mobile PHN has 13 modules",
+      "pass": true
+    },
+    {
+      "check": "mobile PHN mechanism button count",
+      "pass": true
+    },
+    {
+      "check": "mobile PHN central mechanism opens",
+      "pass": true
+    },
+    {
+      "check": "mobile no horizontal viewport overflow",
+      "pass": true
+    },
+    {
+      "check": "mobile no browser JS errors",
+      "pass": true
+    },
+    {
+      "check": "mobile successful fresh load",
+      "pass": true
+    },
+    {
+      "check": "no private Notion page ids",
+      "pass": true
+    },
+    {
+      "check": "no patient information or personal identifier",
+      "pass": true
+    },
+    {
+      "check": "medical disclosures present",
+      "pass": true
+    },
+    {
+      "check": "citation DOI anchors exist",
+      "pass": true
+    },
+    {
+      "check": "no external JS dependency",
+      "pass": true
+    }
+  ],
+  "passed": 31,
+  "failed": 0,
+  "medical_full_review_completed": false
+}
