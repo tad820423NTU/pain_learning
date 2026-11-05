@@ -3,9 +3,20 @@
 **日期：2026-11-05**  
 **狀態：可供公開試讀的教學原型。不是經同儕審查的完整醫學教材。**
 
+## 0. 2026-11-05 主題首頁升級驗收（最新版）
+
+- **66 項 Playwright / Chromium 測試通過、0 失敗**，實際結果見 [`qa-results.json`](qa-results.json)，可透過 [`tests/smoke_test.py`](tests/smoke_test.py) 重跑。測試以 1440 px 桌機、768 px 平板、390 px 手機三種 viewport 執行。
+- 新增真正的**主題首頁**，確認 3 個可學習主題與 23 個規劃中主題（總計 26），搜尋與分類篩選正常。
+- 四步驟排版：桌機 1×4、手機 2×2，等寬且無水平溢出。CRPS 12 單元、PHN 13、Pain neurobiology 4，CRPS／PHN 各有 6 個可切換機轉節點。
+- 路由 `#/topic/crps` / `#/topic/phn`、從主題返回首頁，以及再回原章節的操作通過。
+- **進度/筆記相容性測試**：比對既有 key 名稱未變，並在非網路測試頁注入 **in-memory localStorage shim** 驗證切換時不丟筆記。此項**不等於已在正式 GitHub Pages 瀏覽器確認跨重新整理的真實 localStorage**。實際部署後仍建議抽查。
+- 用原始 release ZIP 逐段比較，`crpsModules`、`phnModules`、`fundamentalsModules` 的教材資料**完全未更動**。本次改版是導覽及版面更新，不宣稱新增或完成醫學全文審核。
+- 未發現 JavaScript runtime errors、重複 DOM IDs 或公開的私人 Notion 連結。
+- **發布狀態**：GitHub `main` 寫入和 Pages build / deploy 另行核對，未確認前不能宣稱上線成功。
+
 ## 1. 網站功能及排版
 
-- Playwright + Chromium 自動化檢查：**31 通過，0 失敗**。結果見 [`qa-results.json`](qa-results.json)。
+- 原始公開試讀版曾通過 **31** 項自動化測試；**最新主題首頁版為 66 通過、0 失敗**，詳見本報告第 0 節及 [`qa-results.json`](qa-results.json)。
 - 1440 px 桌機顯示四個等寬的學習流程，行為正常。
 - 390 px 行動裝置顯示 2×2 的流程格，不產生水平溢出。
 - CRPS 12 modules、PHN 13 modules、兩組各 6 個 mechanism buttons，切換成功。
