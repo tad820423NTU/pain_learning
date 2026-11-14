@@ -25,3 +25,8 @@
 - 首頁由 3 個可學習主題增為 5 個；其餘 21 個主題仍標規劃中，支援 #/topic/tn 和 #/topic/fibro。
 - 將 TN 和 Fibro 課程拆出獨立 public local JS 檔 chapters/tn.js、chapters/fibro.js，不包含私人 Notion URL 或受版權保護的教科書正文。
 - 以 GitHub Actions Playwright smoke suite 執行桌機／平板／手機 QA，實際結果以 workflow logs 為準。臨床內容仍為公開試讀、非完整獨立醫師審查版本。
+
+## 2026-11-14 — Browser favicon
+
+- 新增 `favicon.svg`，以網站現有的深藍圓角方形與白色 Georgia 字體 P 作為瀏覽器分頁與書籤 favicon。
+- `index.html` 宣告版本化 SVG favicon 路徑，未修改既有五個學習主題、閱讀進度鍵或互動機制。
