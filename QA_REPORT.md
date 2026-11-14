@@ -5,7 +5,7 @@
 - Notion 兩頁均已 read-back：各 12 章、5 篇核心文獻、5 題四選一臨床題（含 5 個答案摺疊）、6 條詳解機轉，status=待精讀。未更改使用者掌握度。
 - 公開網站：新課程 chapters/tn.js、chapters/fibro.js，各 12×4 學習階段與六個可點選的 pathophysiology nodes，原有 CRPS、PHN、Pain neurobiology 保留。
 - 首頁 5 個可用主題、21 個規劃中主題。新深連結 #/topic/tn、#/topic/fibro。
-- **技術 QA**：Playwright 更新測試已提交至 tests/smoke_test.py，GitHub Actions workflow smoke.yml 以最新執行日誌為準。先前 66/66 的結果僅代表舊版，不能代表新章節已通過。
+- **技術 QA 已驗證**：2026-11-14 GitHub Actions / Playwright with Chromium 實際執行 **84 項通過、0 項失敗**，見 [工作流程 run #43557712527](https://github.com/tad820423NTU/pain_learning/actions/runs/43557712527)；測試包括三種 viewport、CRPS/PHN 原有流程、TN/FM 各 12 模組與 6 機轉、首頁搜尋、進度鍵、JS errors、排版。CI 以 isolated browser + in-memory localStorage shim 運行，因此不代表已完成正式 GitHub Pages 網址上的真實跨裝置／跨瀏覽器測試。
 - **醫學準確性重點查核**：ICHD-3 clinical TN、classical TN 的 morphological NVC 要求、MRI 高解析檢查及 CBZ/OXC 治療定位；2025 TN 非隨機五年 cohort 的失訪偏差；FM 2016 WPI/SSS+4/5 regions、EULAR exercise strong-for、2016 pregabalin 與 2018 SNRI 的效益及副作用。引用 DOI 見 Notion 各章。
 - **未完成高風險驗證**：臺灣 TFDA／本地仿單各藥品核准適應症與完整劑量調整、特定神經毀損技術選病及風險、每一醫學敘述的原始文獻逐句對照、外部醫師專家覆核。公開頁面保留教育試讀標示，不可宣稱全篇臨床驗證通過。
 - 體例跨章一致性：四階段先閱讀後測驗、英文臨床專業術語優先、proposed mechanism 與確定性療效分開描述，TN／FM 的「central sensitization」不與 neuropathic / nociplastic classification 混為一談。
