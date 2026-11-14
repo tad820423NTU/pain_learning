@@ -46,7 +46,7 @@
     }
   ],
   "quality_gates": {
-    "browser_automated_tests": "prior 66/66 regression historic; updated 84-check CI pending",
+    "browser_automated_tests": "2026-11-14 GitHub Actions Playwright Chromium: 84 passed, 0 failed, run 43557712527",
     "critical_evidence_cross_checks": "9 checked",
     "entire_content_clinician-reviewed": false,
     "entire_content_clinician_reviewed": false
