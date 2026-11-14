@@ -1,7 +1,9 @@
 {
-  "date": "2026-11-05",
-  "scope": "Homepage+existing course browser regression, 1440/768/390px; in-memory localStorage shim on about:blank testing environment.",
-  "passed": 66,
+  "date": "2026-11-14",
+  "source": "GitHub Actions Playwright/Chromium",
+  "run_id": 43557712527,
+  "run_url": "https://github.com/tad820423NTU/pain_learning/actions/runs/43557712527",
+  "passed": 84,
   "failed": 0,
   "checks": [
     {
@@ -9,7 +11,7 @@
       "pass": true
     },
     {
-      "check": "desktop: three available courses",
+      "check": "desktop: five available courses",
       "pass": true
     },
     {
@@ -17,7 +19,7 @@
       "pass": true
     },
     {
-      "check": "desktop: exactly 23 planned topics",
+      "check": "desktop: exactly 21 planned topics",
       "pass": true
     },
     {
@@ -73,6 +75,30 @@
       "pass": true
     },
     {
+      "check": "desktop: TN 12 modules",
+      "pass": true
+    },
+    {
+      "check": "desktop: six TN mechanisms",
+      "pass": true
+    },
+    {
+      "check": "desktop: TN mechanism detail",
+      "pass": true
+    },
+    {
+      "check": "desktop: Fibromyalgia 12 modules",
+      "pass": true
+    },
+    {
+      "check": "desktop: six Fibromyalgia mechanisms",
+      "pass": true
+    },
+    {
+      "check": "desktop: Fibromyalgia mechanism detail",
+      "pass": true
+    },
+    {
       "check": "desktop: basics 4 guided modules",
       "pass": true
     },
@@ -89,7 +115,7 @@
       "pass": true
     },
     {
-      "check": "tablet: three available courses",
+      "check": "tablet: five available courses",
       "pass": true
     },
     {
@@ -97,7 +123,7 @@
       "pass": true
     },
     {
-      "check": "tablet: exactly 23 planned topics",
+      "check": "tablet: exactly 21 planned topics",
       "pass": true
     },
     {
@@ -153,6 +179,30 @@
       "pass": true
     },
     {
+      "check": "tablet: TN 12 modules",
+      "pass": true
+    },
+    {
+      "check": "tablet: six TN mechanisms",
+      "pass": true
+    },
+    {
+      "check": "tablet: TN mechanism detail",
+      "pass": true
+    },
+    {
+      "check": "tablet: Fibromyalgia 12 modules",
+      "pass": true
+    },
+    {
+      "check": "tablet: six Fibromyalgia mechanisms",
+      "pass": true
+    },
+    {
+      "check": "tablet: Fibromyalgia mechanism detail",
+      "pass": true
+    },
+    {
       "check": "tablet: basics 4 guided modules",
       "pass": true
     },
@@ -169,7 +219,7 @@
       "pass": true
     },
     {
-      "check": "mobile: three available courses",
+      "check": "mobile: five available courses",
       "pass": true
     },
     {
@@ -177,7 +227,7 @@
       "pass": true
     },
     {
-      "check": "mobile: exactly 23 planned topics",
+      "check": "mobile: exactly 21 planned topics",
       "pass": true
     },
     {
@@ -233,6 +283,30 @@
       "pass": true
     },
     {
+      "check": "mobile: TN 12 modules",
+      "pass": true
+    },
+    {
+      "check": "mobile: six TN mechanisms",
+      "pass": true
+    },
+    {
+      "check": "mobile: TN mechanism detail",
+      "pass": true
+    },
+    {
+      "check": "mobile: Fibromyalgia 12 modules",
+      "pass": true
+    },
+    {
+      "check": "mobile: six Fibromyalgia mechanisms",
+      "pass": true
+    },
+    {
+      "check": "mobile: Fibromyalgia mechanism detail",
+      "pass": true
+    },
+    {
       "check": "mobile: basics 4 guided modules",
       "pass": true
     },
@@ -271,5 +345,5 @@
   ],
   "full_medical_review_completed": false,
   "live_pages_browser_check_completed": false,
-  "note": "All 66 named checks were observed to pass locally. localStorage persistence across actual GitHub Pages browser refresh remains for live manual validation."
+  "scope": "GitHub Actions on ubuntu-latest using local HTML + inlined local chapter scripts for about:blank; in-memory localStorage shim"
 }
