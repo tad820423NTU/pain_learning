@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#f5f3ed">
-<meta name="description" content="疼痛專科互動學習室，依主題選擇 CRPS、PHN、Pain neurobiology，四階段深入醫學機轉與臨床思考。">
+<meta name="description" content="疼痛專科互動學習室，依主題選擇 CRPS、PHN、Trigeminal neuralgia、Fibromyalgia、Pain neurobiology，四階段深入醫學機轉與臨床思考。">
 <title>Pain Study Room｜疼痛專科互動學習室</title>
 <style>
 :root{color-scheme:light;--paper:#f6f5f0;--white:#fff;--ink:#243042;--muted:#687588;--navy:#253f55;--navy2:#36566b;--accent:#d9b78f;--sage:#e9f1e9;--sage-ink:#50715c;--blue:#e9f0f6;--line:#e0e5e7;--shadow:0 16px 45px rgba(40,56,65,.075);--radius:24px}
@@ -146,6 +146,8 @@ body.at-home #homeOpen,body.at-home #libraryOpen{display:none}
 </div>
 </div>
 <div class="library-back" id="libraryBack" role="dialog" aria-modal="true" aria-label="疼痛專科主題圖書館"><div class="library-window"><div class="modal-top"><div><h2>疼痛專科學習圖書館</h2><p>先選主題、再循序學習。CRPS、PHN 與疼痛機轉已有導讀；其他條目先保留 Notion 入口或列為待建置。</p></div><button class="close" id="libraryClose" aria-label="關閉主題圖書館">×</button></div><input class="search" id="librarySearch" placeholder="搜尋 PHN、神經叢、central sensitization、癌症疼痛……"><div class="library-filters" id="libraryFilters"></div><div id="catalogList"></div><p class="library-note">補充：你提供的 Manus 題庫網站目前無法直接讀取完整題目，所以這裡的延伸考點來自台灣疼痛醫學會公布的訓練範圍與公開考古題，並非聲稱已匯入 Manus 題庫。</p></div></div><div class="glossary-back" id="glossaryBack" role="dialog" aria-modal="true" aria-label="醫學術語字典"><div class="modal"><div class="modal-top"><div><h2>醫學術語字典</h2><p>保留英文專業術語，中文協助理解。可以搜尋。</p></div><button class="close" id="glossaryClose" aria-label="關閉">×</button></div><input class="search" id="termSearch" placeholder="輸入 central sensitization、allodynia……"><div id="termResults"></div></div></div>
+<script src="chapters/tn.js"></script>
+<script src="chapters/fibro.js"></script>
 <script>
 'use strict';
 const stages=['先建立概念','拆解原理','帶到臨床','讀後整理'];
@@ -276,9 +278,9 @@ const fundamentalsModules=[
 const notionItems=[
 ['crps','CRPS','Complex regional pain syndrome','疾病','',true],
 ['phn','PHN','Postherpetic neuralgia','疾病','',true],
-['tn','Trigeminal neuralgia','三叉神經痛','疾病','',false],
+['tn','Trigeminal neuralgia','三叉神經痛 · 12 個互動單元','疾病','',true],
 ['psps','PSPS Type 2 / FBSS','脊椎手術後持續疼痛','疾病','',false],
-['fibro','Fibromyalgia','纖維肌痛症','疾病','',false],
+['fibro','Fibromyalgia','纖維肌痛症 · 12 個互動單元','疾病','',true],
 ['mps','Myofascial pain syndrome','肌筋膜疼痛','疾病','',false],
 ['oih','Opioid tolerance & OIH','鴉片類耐受與痛覺過敏','藥理','',false],
 ['reg','Taiwan opioid regulation','非癌慢性疼痛管制藥品規範','制度','',false],
@@ -304,8 +306,8 @@ const candidates=[
 ['neuraxial','Neuraxial & regional techniques','神經軸與區域阻斷技術','延伸',null,false],
 ];
 const catalog=[...notionItems,...candidates].map(([id,title,subtitle,group,url,ready])=>({id,title,subtitle,group,url,ready}));
-const topicMeta={crps:{title:'CRPS，不再一次讀兩萬字。',note:'完整 12 單元，Pathophysiology 已升級為可點選六個機轉的深讀地圖。',notion:''},phn:{title:'PHN，從病毒到 neuropathic pain。',note:'13 個分段教學單元，含六條可點選機轉、完整藥物與臨床證據。',notion:''},basics:{title:'Pain neurobiology，慢慢讀懂疼痛。',note:'從 nociceptor 到 spinal dorsal horn，用 4 單元打好疾病共用的疼痛機轉基礎。',notion:null}};
-const topicModules={crps:crpsModules,phn:phnModules,basics:fundamentalsModules};
+const topicMeta={crps:{title:'CRPS，不再一次讀兩萬字。',note:'完整 12 單元，Pathophysiology 已升級為可點選六個機轉的深讀地圖。',notion:''},phn:{title:'PHN，從病毒到 neuropathic pain。',note:'13 個分段教學單元，含六條可點選機轉、完整藥物與臨床證據。',notion:''},tn:{title:'Trigeminal Neuralgia：從 REZ 到臨床決策。',note:'12 個完整學習單元，含六個機轉節點及證據判讀。',notion:null},fibro:{title:'Fibromyalgia：理解 nociplastic pain。',note:'12 個完整單元，六條機轉、2016 ACR criteria 與藥物比較。',notion:null},basics:{title:'Pain neurobiology，慢慢讀懂疼痛。',note:'從 nociceptor 到 spinal dorsal horn，用 4 單元打好疾病共用的疼痛機轉基礎。',notion:null}};
+const topicModules={crps:crpsModules,phn:phnModules,tn:window.PAIN_TN.modules,fibro:window.PAIN_FIBRO.modules,basics:fundamentalsModules};
 const mechanismDetails={
  inflammation:{title:'01 · Neurogenic inflammation',subtitle:'Peripheral immune signalling + sensory axon reflex',body:`<p><strong>發生什麼？</strong>受傷後 mast cells、keratinocytes、macrophages 等及局部組織可能釋放 prostaglandins、bradykinin、cytokines。部分 activated sensory fibers 釋出 <strong>substance P、CGRP</strong>，促進 vasodilation 與 vascular permeability。</p><p><strong>臨床連結：</strong>warmth、redness、edema、局部 hyperalgesia。並不是所有紅腫都是 CRPS，感染與血管問題仍須排除。</p><p><strong>證據界線：</strong>局部發炎與神經胜肽研究有生物學支持，但個體 cytokine 數值尚不能取代 Budapest criteria。</p>`},
  peripheral:{title:'02 · Peripheral sensitization',subtitle:'Nociceptor threshold ↓ · gain ↑',body:`<p><strong>發生什麼？</strong>Inflammatory mediators 改變 nociceptor terminal 上的 receptor / ion channel function，例如 TRPV1、voltage-gated sodium channels，使痛覺輸入更容易被觸發。</p><p><strong>重要分別：</strong><em>Primary hyperalgesia</em> 可與受傷部位的 peripheral sensitization 有關，但 CRPS 更廣泛的痛覺擴散不一定只靠周邊解釋。</p><p><strong>臨床連結：</strong>針刺痛、觸覺痛、spontaneous burning pain。不要認為 peripheral sensitization 就一定要能在 MRI 看到神經受傷。</p>`},
@@ -320,6 +322,7 @@ const mechanismDetails={
 "phn-allodynia":{"title": "05 · Aβ input & dynamic allodynia", "subtitle": "Innocuous tactile input is amplified by altered circuits", "body": "<p><strong>機轉：</strong>Low-threshold Aβ mechanoreceptor 本來傳遞輕觸，但在 dorsal horn circuit 和 inhibitory balance 改變下，touch input 可能招募 nociceptive pathways；部分 peripheral sprouting hypotheses 仍有爭論。</p><p><strong>臨床連結：</strong>衣服、棉花、床單輕擦引起疼痛，常見 brush allodynia。</p><p><strong>證據界線：</strong>不是 Aβ afferent「變成」痛覺纖維，而是 altered central readout；不同患者機轉可能不同。</p>"},
 "phn-immune":{"title": "06 · Neuroimmune mediators", "subtitle": "Inflammatory and glial signalling may maintain sensitization", "body": "<p><strong>機轉：</strong>Peripheral cytokines 如 TNF-α / IL-6、oxidative stress、神經膠細胞訊號，以及某些 P2X4–BDNF-related pathways 是持續 neuropathic pain 的研究方向。部分候選路徑來自 animal models。</p><p><strong>臨床連結：</strong>Neuroinflammation 可提供疼痛維持的 mechanistic explanation，但沒有 routine cytokine panel 可用來診斷個別 PHN。</p><p><strong>證據界線：</strong>不能因為機轉有 plausible immune pathway 就宣稱免疫抑制療法是 PHN 的標準治療。</p>"}
 };
+Object.assign(mechanismDetails,window.PAIN_TN.mechanisms,window.PAIN_FIBRO.mechanisms);
 let activeTopicId='crps'; let modules=crpsModules;
 
 const terms=[
@@ -346,7 +349,7 @@ let current=Number.isInteger(Number(store.current))&&Number(store.current)>=0&&N
 let step=0;
 function save(){try{store.current=current;localStorage.setItem(key,JSON.stringify(store))}catch(e){}}
 const el=id=>document.getElementById(id);
-function render(){const m=modules[current];document.getElementById('sideTitle').textContent=`學習目錄 · ${modules.length} MODULES`;document.getElementById('progressTrack').setAttribute('aria-valuemax',String(modules.length));step=Math.max(0,Math.min(3,Number(store.steps[current]||0)));el('navList').innerHTML=modules.map((x,i)=>`<button class="nav-item ${i===current?'selected':''} ${store.done.includes(i)?'done':''}" data-nav="${i}" ${i===current?'aria-current="true"':''}><span class="nav-num">${store.done.includes(i)?'✓':String(i+1).padStart(2,'0')}</span><span class="nav-label">${x.title}<small>${x.en}</small></span></button>`).join('');el('crumb').textContent=`MODULE ${String(current+1).padStart(2,'0')} / ${modules.length}`;el('chapterTitle').textContent=m.title;el('chapterEn').textContent=m.en;el('chapterSub').textContent=m.sub;el('stageNav').innerHTML=stages.map((s,i)=>`<button class="stage ${i===step?'active':i<step?'past':''}" data-step="${i}" ${i>step?'disabled':''}><span class="dot">${i<step?'✓':i+1}</span>${s}</button>`).join('');el('stageEyebrow').textContent=stages[step]+' · STEP '+(step+1);el('stageQuestion').textContent=m.q;el('stageContent').innerHTML=m.steps[step];if(activeTopicId==='crps'&&current===2&&step===1){showMechanism('inflammation');}if(activeTopicId==='phn'&&current===2&&step===1){showMechanism('phn-ganglion');}el('stageCount').textContent=`${step+1} / 4 小段`;el('backBtn').disabled=current===0&&step===0;el('nextBtn').textContent=step===3?(current===modules.length-1?'完成本主題導讀 ✓':'完成這章，讀下一章 →'):'繼續閱讀 →';el('noteInput').value=store.notes[current]||'';let count=store.done.length;el('progressNum').textContent=`${count} / ${modules.length}`;el('progressTrack').setAttribute('aria-valuenow',String(count));el('progressBar').style.width=(count/modules.length*100)+'%';save();}
+function render(){const m=modules[current];document.getElementById('sideTitle').textContent=`學習目錄 · ${modules.length} MODULES`;document.getElementById('progressTrack').setAttribute('aria-valuemax',String(modules.length));step=Math.max(0,Math.min(3,Number(store.steps[current]||0)));el('navList').innerHTML=modules.map((x,i)=>`<button class="nav-item ${i===current?'selected':''} ${store.done.includes(i)?'done':''}" data-nav="${i}" ${i===current?'aria-current="true"':''}><span class="nav-num">${store.done.includes(i)?'✓':String(i+1).padStart(2,'0')}</span><span class="nav-label">${x.title}<small>${x.en}</small></span></button>`).join('');el('crumb').textContent=`MODULE ${String(current+1).padStart(2,'0')} / ${modules.length}`;el('chapterTitle').textContent=m.title;el('chapterEn').textContent=m.en;el('chapterSub').textContent=m.sub;el('stageNav').innerHTML=stages.map((s,i)=>`<button class="stage ${i===step?'active':i<step?'past':''}" data-step="${i}" ${i>step?'disabled':''}><span class="dot">${i<step?'✓':i+1}</span>${s}</button>`).join('');el('stageEyebrow').textContent=stages[step]+' · STEP '+(step+1);el('stageQuestion').textContent=m.q;el('stageContent').innerHTML=m.steps[step];if(activeTopicId==='crps'&&current===2&&step===1){showMechanism('inflammation');}if(activeTopicId==='phn'&&current===2&&step===1){showMechanism('phn-ganglion');}if(activeTopicId==='tn'&&current===2&&step===1){showMechanism('tn-rez');}if(activeTopicId==='fibro'&&current===2&&step===1){showMechanism('fm-central');}el('stageCount').textContent=`${step+1} / 4 小段`;el('backBtn').disabled=current===0&&step===0;el('nextBtn').textContent=step===3?(current===modules.length-1?'完成本主題導讀 ✓':'完成這章，讀下一章 →'):'繼續閱讀 →';el('noteInput').value=store.notes[current]||'';let count=store.done.length;el('progressNum').textContent=`${count} / ${modules.length}`;el('progressTrack').setAttribute('aria-valuenow',String(count));el('progressBar').style.width=(count/modules.length*100)+'%';save();}
 function go(i){current=i;step=Number(store.steps[current]||0);window.scrollTo({top:document.querySelector('.layout').getBoundingClientRect().top+window.scrollY-20,behavior:'smooth'});render()}
 el('navList').addEventListener('click',e=>{let btn=e.target.closest('[data-nav]');if(btn)go(Number(btn.dataset.nav))});
 el('stageNav').addEventListener('click',e=>{let btn=e.target.closest('[data-step]');if(btn){step=Number(btn.dataset.step);store.steps[current]=step;render()}});
@@ -379,7 +382,7 @@ function homeProgress(id){
   return {count:Math.min(count,total),total};
 }
 function renderHome(){
-  const ids=['crps','phn','basics'];
+  const ids=['crps','phn','tn','fibro','basics'];
   el('homeReadyCount').textContent=String(catalog.filter(t=>t.ready&&topicModules[t.id]).length);
   el('homeCatalogCount').textContent=`${catalog.length} 個主題`;
   el('homeFeatured').innerHTML=ids.map(id=>{
