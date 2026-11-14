@@ -1,5 +1,5 @@
 {
-  "release_date": "2026-11-05",
+  "release_date": "2026-11-14",
   "release_stage": "public-preview",
   "public_medical_validation": "key-claims-checked_full-review-pending",
   "content": [
@@ -20,6 +20,24 @@
       "interactive_mechanisms": 6
     },
     {
+      "id": "tn",
+      "name": "Trigeminal Neuralgia",
+      "status": "guided-lessons-available; medical clinician review pending",
+      "modules": 12,
+      "learning_stages_each": 4,
+      "interactive_mechanisms": 6,
+      "notion_status": "待精讀"
+    },
+    {
+      "id": "fibro",
+      "name": "Fibromyalgia",
+      "status": "guided-lessons-available; medical clinician review pending",
+      "modules": 12,
+      "learning_stages_each": 4,
+      "interactive_mechanisms": 6,
+      "notion_status": "待精讀"
+    },
+    {
       "id": "basics",
       "name": "Pain Neurobiology",
       "status": "introductory-guided-lessons",
@@ -28,7 +46,7 @@
     }
   ],
   "quality_gates": {
-    "browser_automated_tests": "66 passed, 0 failed (3 viewport sizes; localStorage shim)",
+    "browser_automated_tests": "prior 66/66 regression historic; updated 84-check CI pending",
     "critical_evidence_cross_checks": "9 checked",
     "entire_content_clinician-reviewed": false,
     "entire_content_clinician_reviewed": false
@@ -37,14 +55,16 @@
   "homepage": {
     "enabled": true,
     "catalog_topics": 26,
-    "available_interactive_topics": 3,
-    "planned_topics": 23,
+    "available_interactive_topics": 5,
+    "planned_topics": 21,
     "shareable_routes": [
       "#/topic/crps",
       "#/topic/phn",
+      "#/topic/tn",
+      "#/topic/fibro",
       "#/topic/basics"
     ]
   },
   "workflow_file": "WORKFLOW.md",
-  "last_ui_update": "2026-11-05"
+  "last_ui_update": "2026-11-14"
 }
