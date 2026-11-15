@@ -1,5 +1,5 @@
 {
-  "release_date": "2026-11-14",
+  "release_date": "2026-11-15",
   "release_stage": "public-preview",
   "public_medical_validation": "key-claims-checked_full-review-pending",
   "content": [
@@ -29,9 +29,27 @@
       "notion_status": "待精讀"
     },
     {
+      "id": "psps",
+      "name": "Persistent Spinal Pain Syndrome Type 2",
+      "status": "guided-lessons-available; clinician-review-pending",
+      "modules": 12,
+      "learning_stages_each": 4,
+      "interactive_mechanisms": 6,
+      "notion_status": "待精讀"
+    },
+    {
       "id": "fibro",
       "name": "Fibromyalgia",
       "status": "guided-lessons-available; medical clinician review pending",
+      "modules": 12,
+      "learning_stages_each": 4,
+      "interactive_mechanisms": 6,
+      "notion_status": "待精讀"
+    },
+    {
+      "id": "mps",
+      "name": "Myofascial Pain Syndrome",
+      "status": "guided-lessons-available; clinician-review-pending",
       "modules": 12,
       "learning_stages_each": 4,
       "interactive_mechanisms": 6,
@@ -46,7 +64,7 @@
     }
   ],
   "quality_gates": {
-    "browser_automated_tests": "2026-11-14 GitHub Actions Playwright Chromium: 84 passed, 0 failed, run 43557712527",
+    "browser_automated_tests": "Previous 84/84; 120-check CI pending final result",
     "critical_evidence_cross_checks": "9 checked",
     "entire_content_clinician-reviewed": false,
     "entire_content_clinician_reviewed": false
@@ -55,16 +73,18 @@
   "homepage": {
     "enabled": true,
     "catalog_topics": 26,
-    "available_interactive_topics": 5,
-    "planned_topics": 21,
+    "available_interactive_topics": 7,
+    "planned_topics": 19,
     "shareable_routes": [
       "#/topic/crps",
       "#/topic/phn",
       "#/topic/tn",
+      "#/topic/psps",
       "#/topic/fibro",
+      "#/topic/mps",
       "#/topic/basics"
     ]
   },
   "workflow_file": "WORKFLOW.md",
-  "last_ui_update": "2026-11-14"
+  "last_ui_update": "2026-11-15"
 }
