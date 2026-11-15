@@ -133,7 +133,7 @@ window.PAIN_REG={
       "sub": "100、50、90 mg MEDD / MME 應如何比較？",
       "q": "100、50、90 mg MEDD / MME 應如何比較？",
       "steps": [
-        "<table><tr><th>適用族群與指引</th><th>建議與限制</th></tr><tr><td><strong>Taiwan TFDA 2022</strong> noncancer refractory pain</td><td>一般 <strong>100 mg MEDD</strong> 以下可有效止痛；更高應再評估。不是法定硬上限。</td></tr><tr><td><strong>CDC 2022</strong> US outpatient selected adults</td><td>在升到 <strong>≥50 MME/day</strong> 前 pause/reassess；不當 rigid cap；避免 rapid forced taper。</td></tr><tr><td><strong>Canada Busse 2017</strong> chronic noncancer opioid initiation</td><td>Recommend <strong><90 MED/day</strong>、suggest <strong><50 MED/day</strong>，不同建議強度。</td></tr><tr><td><strong>NICE NG193 2021</strong> chronic primary pain age≥16</td><td><strong>Do not initiate opioid</strong> for chronic primary pain，已使用者 shared review；非所有 secondary/cancer pain。</td></tr></table>",
+        "<table><tr><th>適用族群與指引</th><th>建議與限制</th></tr><tr><td><strong>Taiwan TFDA 2022</strong> noncancer refractory pain</td><td>一般 <strong>100 mg MEDD</strong> 以下可有效止痛；更高應再評估。不是法定硬上限。</td></tr><tr><td><strong>CDC 2022</strong> US outpatient selected adults</td><td>在升到 <strong>≥50 MME/day</strong> 前 pause/reassess；不當 rigid cap；避免 rapid forced taper。</td></tr><tr><td><strong>Canada Busse 2017</strong> chronic noncancer opioid initiation</td><td>Recommend <strong>&lt;90 MED/day</strong>、suggest <strong>&lt;50 MED/day</strong>，不同建議強度。</td></tr><tr><td><strong>NICE NG193 2021</strong> chronic primary pain age≥16</td><td><strong>Do not initiate opioid</strong> for chronic primary pain，已使用者 shared review；非所有 secondary/cancer pain。</td></tr></table>",
         "<p>四者的時間、適用病人、建議強度與法律效力不同。CDC、NICE、Canada 的 clinical recommendations 不能取代台灣醫師執照、處方箋、保管與列報法定責任，也不應把任何 MME reference 當成全球通用強制停藥標準。</p>",
         "<p>考題說「CDC 50 MME 所以台灣 51 mg 違法」錯；「NICE 不准癌痛 opioids」也錯；加拿大是開始療法劑量建議，不表示已服用高劑量的患者必須突然停藥。</p>",
         "<div class=\"review-box\"><h3>四國一句話</h3><p>TFDA 100 review reference；CDC 50 pause；Canada 90 recommend/50 suggest at initiation；NICE chronic primary pain do not initiate。</p></div>"
@@ -178,7 +178,7 @@ window.PAIN_REG={
     "reg-dose": {
       "title": "03 · Relative MEDD guideposts",
       "subtitle": "Taiwan 100, US 50, Canada 50/90",
-      "body": "<p>TFDA 100 mg 是 re-evaluation reference；CDC 2022 ≥50 MME 指需暫停思考效益/風險；Canada 2017 <90 recommend、<50 suggest for initiating CNCP。不同國家與脈絡，不可視為同一法律。</p>"
+      "body": "<p>TFDA 100 mg 是 re-evaluation reference；CDC 2022 ≥50 MME 指需暫停思考效益/風險；Canada 2017 &lt;90 recommend、&lt;50 suggest for initiating CNCP。不同國家與脈絡，不可視為同一法律。</p>"
     },
     "reg-days": {
       "title": "04 · Clinical duration and review clocks",
@@ -233,7 +233,7 @@ window.PAIN_REG={
       "url": "https://doi.org/10.1503/cmaj.170363",
       "doi": "10.1503/cmaj.170363",
       "design": "Canadian clinical practice guideline, initiation of opioids for chronic noncancer pain.",
-      "result": "Recommend initiation <90 mg oral MED/day, suggest <50 MED/day, prioritize nonopioid treatments.",
+      "result": "Recommend initiation &lt;90 mg oral MED/day, suggest &lt;50 MED/day, prioritize nonopioid treatments.",
       "limits": "Guidance, not Taiwan legal max; older 2017 context.",
       "meaning": "Understand recommendation strength vs suggestion."
     },
