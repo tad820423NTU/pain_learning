@@ -1,5 +1,18 @@
 # Pain Study Room｜品質稽核與驗收
 
+## 2026-11-15｜Opioid tolerance & OIH / Taiwan Opioid Regulation
+
+- **Notion read-back**：OIH 12 專題章、法規與國際比較 13 章，兩篇均為六個獨立機轉／規範節點、5份核對來源卡、5題四選一病例含 5 個答案摺疊，待精讀、掌握度未評估。公開網站 OIH 12×4、Taiwan regulation 13×4 learning stages。
+- **Bonica source grounding**：OIH 以 Bonica 5th Ch5 descending RVM/PAG（pp369–370）、Ch32 tolerance/dependence/OIH（pp1528–1533）及 opioid rotation/pharmacology 章節為基礎；不直接重製教科書全文。
+- **OIH verified evidence**：Fletcher 2014 27 trials/1494 people，24h postoperative morphine SMD 0.70 (95% CI 0.37–1.02) DOI:10.1093/bja/aeu137；Wilson 2021 clinical review DOI:10.2217/pmt-2020-0105；2024 mouse HCN2 DOI:10.1523/JNEUROSCI.1368-23.2023；Trøstheim 2024 39 studies / 1385 OUD patients + 741 control DOI:10.1001/jamapsychiatry.2024.2176，cold tolerance difference cannot prove opioid causality；Darnall 2026 EMPOWER 562 people DOI:10.7326/ANNALS-25-04784，patient-centered taper not OIH-specific proof。
+- **Legal/policy source hierarchy**：Taiwan Controlled Drugs Act (https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=L0030010)，Articles 7/8/10/16/24/28/32；TFDA 2022-01-13 revised noncancer refractory pain guideline in official 2025 compendium，100 mg MEDD review reference, not statutory cap；14/15/7 prescription days, conditional 28/30, 4-month committee + case reporting, 6-month consent。Compare CDC 2022 DOI:10.15585/mmwr.rr7103a1 ≥50 MME reassessment，Canada 2017 DOI:10.1503/cmaj.170363 initiation <90 recommended/<50 suggested，NICE NG193 chronic primary pain no opioid initiation。Clinical guideline ≠ Taiwanese law。
+- **Cross-chapter consistency**：OIH cannot be inferred solely from higher dose or worsening pain; distinguish tolerance, physical dependence, OUD and withdrawal. Regulation 100mg is different from opioid risk and from conversion table; no medication schedule/product authorization/insurance assumption without live local verification.
+- **Important unresolved**：all Taiwan product-specific TFDA labels, NHIA reimbursement, legal agency updates after 2026-11-15, detailed procedural/high-dose exceptions, and independent medical/legal expert line-by-line review NOT performed. Public preview only.
+- **Technical smoke**：new 156-check Playwright suite covers desktop/tablet/mobile, nine courses and all six new mechanisms; pending observed GitHub Actions result. Uses in-memory browser storage shim, does not prove real live multi-browser storage fidelity.
+
+---
+
+
 ## 2026-11-15｜PSPS Type 2 與 Myofascial Pain Syndrome
 
 - **Notion 內容完整度**：兩篇各 12 章、6 條 Mechanism Atlas、5 篇核心文獻、5 題含摺疊答案，狀態待精讀。網站兩篇各 12×4 學習階段，六個互動機轉；保留其他五篇。
