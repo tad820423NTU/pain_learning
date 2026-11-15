@@ -14,7 +14,7 @@ import re
 root=Path(__file__).resolve().parent.parent
 html=(root/'index.html').read_text(encoding='utf-8')
 # Inline only for the about:blank test environment. Production uses local files.
-for topic in ('tn','fibro'):
+for topic in ('tn','fibro','psps2','mps'):
     tag=f'<script src="chapters/{topic}.js"></script>'
     assert tag in html, f'Missing chapter script: {topic}'
     src=(root/'chapters'/f'{topic}.js').read_text(encoding='utf-8')
@@ -47,9 +47,9 @@ with sync_playwright() as p:
         page.set_content(html,wait_until='load')
         page.wait_for_timeout(50)
         ck(f'{device}: landing visible',page.locator('#homeView').is_visible() and not page.locator('#lessonView').is_visible())
-        ck(f'{device}: five available courses',page.locator('#homeFeatured .featured-card').count()==5)
+        ck(f'{device}: seven available courses',page.locator('#homeFeatured .featured-card').count()==7)
         ck(f'{device}: 26 catalog topics',page.locator('#homeCatalog .topic-card').count()==26)
-        ck(f'{device}: exactly 21 planned topics',page.locator('#homeCatalog .topic-card:not(.live)').count()==21)
+        ck(f'{device}: exactly 19 planned topics',page.locator('#homeCatalog .topic-card:not(.live)').count()==19)
         boxes=[page.locator('.home-step').nth(i).bounding_box() for i in range(4)]
         ck(f'{device}: four-step balanced layout',len(set(round(b['y']) for b in boxes))==(1 if width>=720 else 2))
         ck(f'{device}: home-step equal widths',max(b['width'] for b in boxes)-min(b['width'] for b in boxes)<2)
@@ -99,6 +99,34 @@ with sync_playwright() as p:
         page.locator('[data-mech="fm-small"]').click()
         ck(f'{device}: Fibromyalgia mechanism detail','Small-fiber' in page.locator('.mech-head h3').inner_text())
         page.locator('#homeOpen').click()
+        page.locator('#homeFeatured [data-home-topic="psps"]').click()
+        ck(f'{device}: PSPS 12 modules',page.locator('#navList .nav-item').count()==12)
+        page.locator('#navList button[data-nav="2"]').click()
+        page.locator('#nextBtn').click()
+        ck(f'{device}: six PSPS mechanisms',page.locator('.mechanism-button').count()==6)
+        ck(f'{device}: default PSPS mechanism', 'Residual' in page.locator('.mech-head h3').inner_text())
+        page.locator('[data-mech="ps-scar"]').click()
+        ck(f'{device}: PSPS fibrosis mechanism detail', 'Fibrosis' in page.locator('.mech-head h3').inner_text())
+        page.locator('#homeOpen').click()
+        page.evaluate("location.hash='#/topic/psps'")
+        page.wait_for_timeout(30)
+        ck(f'{device}: PSPS hash route',page.locator('#lessonView').is_visible() and page.locator('#navList .nav-item').count()==12)
+        page.locator('#homeOpen').click()
+        ck(f'{device}: PSPS return home',page.locator('#homeView').is_visible())
+        page.locator('#homeFeatured [data-home-topic="mps"]').click()
+        ck(f'{device}: MPS 12 modules',page.locator('#navList .nav-item').count()==12)
+        page.locator('#navList button[data-nav="2"]').click()
+        page.locator('#nextBtn').click()
+        ck(f'{device}: six MPS mechanisms',page.locator('.mechanism-button').count()==6)
+        ck(f'{device}: default MPS mechanism', 'Motor endplate' in page.locator('.mech-head h3').inner_text())
+        page.locator('[data-mech="mps-referral"]').click()
+        ck(f'{device}: MPS referred pain mechanism detail', 'Referred pain' in page.locator('.mech-head h3').inner_text())
+        page.locator('#homeOpen').click()
+        page.evaluate("location.hash='#/topic/mps'")
+        page.wait_for_timeout(30)
+        ck(f'{device}: MPS hash route',page.locator('#lessonView').is_visible() and page.locator('#navList .nav-item').count()==12)
+        page.locator('#homeOpen').click()
+        ck(f'{device}: MPS return home',page.locator('#homeView').is_visible())
         page.locator('#homeFeatured [data-home-topic="basics"]').click()
         ck(f'{device}: basics 4 guided modules',page.locator('#lessonView').is_visible() and page.locator('#navList .nav-item').count()==4)
         page.locator('#homeOpen').click()
@@ -114,7 +142,7 @@ ck('static: no remote JS dependency',not re.search(r'<script[^>]+src=[\x22\x27]h
 ck('static: 4 learning stages preserved',"const stages=['先建立概念','拆解原理','帶到臨床','讀後整理'];" in html)
 ck('static: no user identifiable string',not any(s in html for s in ['家豪','Chia-Hao','亞東醫院','病歷號','病人姓名']))
 
-report={'date':'2026-11-14','passed':sum(x['pass'] for x in checks),'failed':sum(not x['pass'] for x in checks),'checks':checks,'full_medical_review_completed':False,'live_pages_browser_check_completed':False,'scope':'Local Chromium smoke tests, with test-only in-memory storage shim'}
+report={'date':'2026-11-15','passed':sum(x['pass'] for x in checks),'failed':sum(not x['pass'] for x in checks),'checks':checks,'full_medical_review_completed':False,'live_pages_browser_check_completed':False,'scope':'Local Chromium smoke tests, with test-only in-memory storage shim'}
 (root/'qa-results.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(f"Passed {report['passed']}; failed {report['failed']}")
 if report['failed']:raise SystemExit(1)
