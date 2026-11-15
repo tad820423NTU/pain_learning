@@ -6,7 +6,7 @@
 
 ## A. 指令如何解讀
 
-- 「幫我做新的一章」：先讀取 Notion「一直複習」資料表當下排序及 GitHub 最新內容，選下一個尚未完成的正式章節。目前 CRPS、PHN、Trigeminal Neuralgia、Fibromyalgia 已有互動教材，下一個依 Notion 原有順序的未完成主題候選為 PSPS Type 2 / FBSS；每次仍以最新資料為準。
+- 「幫我做新的一章」：先讀取 Notion「一直複習」資料表當下排序及 GitHub 最新內容，選下一個尚未完成的正式章節。目前 CRPS、PHN、Trigeminal Neuralgia、PSPS Type 2、Fibromyalgia、MPS 已有互動教材，下一個依 Notion 原有順序的未完成主題候選為 Opioid tolerance & OIH；每次仍以最新資料為準。
 - 「幫我做 XXX」：指定主題優先，避免重複建立既有 Notion 頁面。
 - 「幫我補強 XXX 的致病機轉」：只修改所指定的內容，保留其餘資料、個人標記和閱讀進度。
 - 遇到不能查證的數據、工具權限不足或發布失敗，立即標示阻礙，不可宣稱完成。
