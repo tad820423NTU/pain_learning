@@ -2,13 +2,15 @@
 
 **公開網站：** https://tad820423ntu.github.io/pain_learning/
 
-繁體中文疼痛醫學分段學習網站。新首頁可選 CRPS、PHN、Trigeminal Neuralgia、Fibromyalgia 或 Pain neurobiology，再依「① 認識概念 → ② 理解機轉 → ③ 臨床連結 → ④ 自我整理」逐步學習；其他 21 項主題目前為「規劃中」。
+繁體中文疼痛醫學分段學習網站。新首頁可選 CRPS、PHN、Trigeminal Neuralgia、PSPS Type 2、Fibromyalgia、Myofascial Pain Syndrome 或 Pain neurobiology，再依「① 認識概念 → ② 理解機轉 → ③ 臨床連結 → ④ 自我整理」逐步學習；其他 19 項主題目前為「規劃中」。
 
 ## 已開放
 
 - [CRPS｜12 單元](https://tad820423ntu.github.io/pain_learning/#/topic/crps)：6 個互動 Pathophysiology 節點
 - [PHN｜13 單元](https://tad820423ntu.github.io/pain_learning/#/topic/phn)：6 個互動 Pathophysiology 節點
 - [Trigeminal Neuralgia｜12 單元](https://tad820423ntu.github.io/pain_learning/#/topic/tn)：6 個機轉、ICHD-3、MRI／CBZ-OXC／MVD 等決策
+- [PSPS Type 2 / FBSS｜12 單元](https://tad820423ntu.github.io/pain_learning/#/topic/psps)：術後疼痛、影像與 SCS 選病
+- [Myofascial Pain Syndrome｜12 單元](https://tad820423ntu.github.io/pain_learning/#/topic/mps)：trigger point、referred pain、DN/TPI
 - [Fibromyalgia｜12 單元](https://tad820423ntu.github.io/pain_learning/#/topic/fibro)：6 個機轉、ACR 2016、exercise 與藥物證據
 - [Pain neurobiology｜4 單元](https://tad820423ntu.github.io/pain_learning/#/topic/basics)：共同機轉入門
 
