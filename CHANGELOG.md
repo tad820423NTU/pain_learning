@@ -30,3 +30,10 @@
 
 - 新增 `favicon.svg`，以網站現有的深藍圓角方形與白色 Georgia 字體 P 作為瀏覽器分頁與書籤 favicon。
 - `index.html` 宣告版本化 SVG favicon 路徑，未修改既有五個學習主題、閱讀進度鍵或互動機制。
+
+## 2026-11-15 — PSPS Type 2 / FBSS 與 Myofascial Pain Syndrome
+
+- 依 Bonica 第五版 Ch75 / Ch35 完成兩篇原 Notion 正文，各 12 章、6 機轉、5 篇 DOI 文獻、5 題摺疊解析，均待精讀。
+- GitHub 新增 chapters/psps2.js、chapters/mps.js，各 12 個四階段單元與六機轉。首頁更新 7 個可閱讀課程、19 個規劃中主題，深連結 #/topic/psps、#/topic/mps。
+- PSPS2 結合 PROCESS RCT vs 2023 Cochrane sham evidence 的 PICO 差異；MPS 區分觸診共識、可靠度及注射/乾針療效。
+- 新版 GitHub Actions Playwright 設計 120 項回歸測試，以實際日誌判定通過；仍為醫學公開試讀、非全面專家驗證。
