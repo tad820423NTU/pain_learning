@@ -1,5 +1,15 @@
 # Pain Study Room｜品質稽核與驗收
 
+## 2026-11-15｜PSPS Type 2 與 Myofascial Pain Syndrome
+
+- **Notion 內容完整度**：兩篇各 12 章、6 條 Mechanism Atlas、5 篇核心文獻、5 題含摺疊答案，狀態待精讀。網站兩篇各 12×4 學習階段，六個互動機轉；保留其他五篇。
+- **PSPS2 證據**：Bonica 5th Ch75；Christelis 2021 doi:10.1093/pm/pnab015；van de Minkelis 2024 doi:10.1111/papr.13379；Kumar PROCESS 2007 doi:10.1016/j.pain.2007.07.028（leg pain responder 48% vs 9%，non-sham CMM comparator）；Traeger 2023 Cochrane doi:10.1002/14651858.CD014789.pub2（broader low back pain, sham at 6mo）及 Shanthanna 2023 doi:10.1136/rapm-2022-104097（trial selection guidance）。不可混為一個 PICO。
+- **MPS 證據**：Bonica 5th Ch35；Fernández-de-Las-Peñas/Dommerholt Delphi 2018 doi:10.1093/pm/pnx207；Rathbone 2017 palpation κ=0.452 (CI 0.364–0.540) doi:10.1097/AJP.0000000000000459；Kietrys 2013 DN SR doi:10.2519/jospt.2013.4668；Debrosse 2022 injectate review doi:10.1016/j.inpm.2022.100076；Chen 2025 8 RCTs / 470 subjects, no important DN vs active physical modalities advantage doi:10.1016/j.jbmt.2025.08.015。Chen 原摘要的 CI 正負號/排序不自洽，避免自行修正引用。
+- **醫學限制**：台灣 TFDA 仿單劑量／適應症逐項審查、侵入治療的全部術式風險及全篇獨立醫師逐句審閱尚未完成。網站僅為 public preview。
+- **技術檢查**：新版 Playwright 120 項（3 viewport × 38 + 6 static）已提交；以最新 CI 日誌是否通過為準，測試用 in-memory localStorage shim，不等同於正式網域完整實測。
+
+---
+
 ## 2026-11-14 TN / Fibromyalgia 新增章節驗收
 
 - Notion 兩頁均已 read-back：各 12 章、5 篇核心文獻、5 題四選一臨床題（含 5 個答案摺疊）、6 條詳解機轉，status=待精讀。未更改使用者掌握度。
