@@ -64,8 +64,8 @@
     }
   ],
   "quality_gates": {
-    "browser_automated_tests": "Previous 84/84; 120-check CI pending final result",
-    "critical_evidence_cross_checks": "9 checked",
+    "browser_automated_tests": "GitHub Actions run 43703695323 Playwright Chromium: 120 passed, 0 failed (2026-11-15)",
+    "critical_evidence_cross_checks": "Prior nine historical checks + PSPS/MPS key claim-level source verification (see QA_REPORT.md); full clinician review pending",
     "entire_content_clinician-reviewed": false,
     "entire_content_clinician_reviewed": false
   },
