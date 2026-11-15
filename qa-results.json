@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-14",
-  "source": "GitHub Actions Playwright/Chromium",
-  "run_id": 43557712527,
-  "run_url": "https://github.com/tad820423NTU/pain_learning/actions/runs/43557712527",
-  "passed": 84,
+  "date": "2026-11-15",
+  "source": "GitHub Actions Playwright Chromium",
+  "run_id": 43703695323,
+  "run_url": "https://github.com/tad820423NTU/pain_learning/actions/runs/43703695323",
+  "passed": 120,
   "failed": 0,
   "checks": [
     {
@@ -11,7 +11,7 @@
       "pass": true
     },
     {
-      "check": "desktop: five available courses",
+      "check": "desktop: seven available courses",
       "pass": true
     },
     {
@@ -19,7 +19,7 @@
       "pass": true
     },
     {
-      "check": "desktop: exactly 21 planned topics",
+      "check": "desktop: exactly 19 planned topics",
       "pass": true
     },
     {
@@ -99,6 +99,54 @@
       "pass": true
     },
     {
+      "check": "desktop: PSPS 12 modules",
+      "pass": true
+    },
+    {
+      "check": "desktop: six PSPS mechanisms",
+      "pass": true
+    },
+    {
+      "check": "desktop: default PSPS mechanism",
+      "pass": true
+    },
+    {
+      "check": "desktop: PSPS fibrosis mechanism detail",
+      "pass": true
+    },
+    {
+      "check": "desktop: PSPS hash route",
+      "pass": true
+    },
+    {
+      "check": "desktop: PSPS return home",
+      "pass": true
+    },
+    {
+      "check": "desktop: MPS 12 modules",
+      "pass": true
+    },
+    {
+      "check": "desktop: six MPS mechanisms",
+      "pass": true
+    },
+    {
+      "check": "desktop: default MPS mechanism",
+      "pass": true
+    },
+    {
+      "check": "desktop: MPS referred pain mechanism detail",
+      "pass": true
+    },
+    {
+      "check": "desktop: MPS hash route",
+      "pass": true
+    },
+    {
+      "check": "desktop: MPS return home",
+      "pass": true
+    },
+    {
       "check": "desktop: basics 4 guided modules",
       "pass": true
     },
@@ -115,7 +163,7 @@
       "pass": true
     },
     {
-      "check": "tablet: five available courses",
+      "check": "tablet: seven available courses",
       "pass": true
     },
     {
@@ -123,7 +171,7 @@
       "pass": true
     },
     {
-      "check": "tablet: exactly 21 planned topics",
+      "check": "tablet: exactly 19 planned topics",
       "pass": true
     },
     {
@@ -203,6 +251,54 @@
       "pass": true
     },
     {
+      "check": "tablet: PSPS 12 modules",
+      "pass": true
+    },
+    {
+      "check": "tablet: six PSPS mechanisms",
+      "pass": true
+    },
+    {
+      "check": "tablet: default PSPS mechanism",
+      "pass": true
+    },
+    {
+      "check": "tablet: PSPS fibrosis mechanism detail",
+      "pass": true
+    },
+    {
+      "check": "tablet: PSPS hash route",
+      "pass": true
+    },
+    {
+      "check": "tablet: PSPS return home",
+      "pass": true
+    },
+    {
+      "check": "tablet: MPS 12 modules",
+      "pass": true
+    },
+    {
+      "check": "tablet: six MPS mechanisms",
+      "pass": true
+    },
+    {
+      "check": "tablet: default MPS mechanism",
+      "pass": true
+    },
+    {
+      "check": "tablet: MPS referred pain mechanism detail",
+      "pass": true
+    },
+    {
+      "check": "tablet: MPS hash route",
+      "pass": true
+    },
+    {
+      "check": "tablet: MPS return home",
+      "pass": true
+    },
+    {
       "check": "tablet: basics 4 guided modules",
       "pass": true
     },
@@ -219,7 +315,7 @@
       "pass": true
     },
     {
-      "check": "mobile: five available courses",
+      "check": "mobile: seven available courses",
       "pass": true
     },
     {
@@ -227,7 +323,7 @@
       "pass": true
     },
     {
-      "check": "mobile: exactly 21 planned topics",
+      "check": "mobile: exactly 19 planned topics",
       "pass": true
     },
     {
@@ -307,6 +403,54 @@
       "pass": true
     },
     {
+      "check": "mobile: PSPS 12 modules",
+      "pass": true
+    },
+    {
+      "check": "mobile: six PSPS mechanisms",
+      "pass": true
+    },
+    {
+      "check": "mobile: default PSPS mechanism",
+      "pass": true
+    },
+    {
+      "check": "mobile: PSPS fibrosis mechanism detail",
+      "pass": true
+    },
+    {
+      "check": "mobile: PSPS hash route",
+      "pass": true
+    },
+    {
+      "check": "mobile: PSPS return home",
+      "pass": true
+    },
+    {
+      "check": "mobile: MPS 12 modules",
+      "pass": true
+    },
+    {
+      "check": "mobile: six MPS mechanisms",
+      "pass": true
+    },
+    {
+      "check": "mobile: default MPS mechanism",
+      "pass": true
+    },
+    {
+      "check": "mobile: MPS referred pain mechanism detail",
+      "pass": true
+    },
+    {
+      "check": "mobile: MPS hash route",
+      "pass": true
+    },
+    {
+      "check": "mobile: MPS return home",
+      "pass": true
+    },
+    {
       "check": "mobile: basics 4 guided modules",
       "pass": true
     },
@@ -345,5 +489,5 @@
   ],
   "full_medical_review_completed": false,
   "live_pages_browser_check_completed": false,
-  "scope": "GitHub Actions on ubuntu-latest using local HTML + inlined local chapter scripts for about:blank; in-memory localStorage shim"
+  "scope": "GitHub Actions ubuntu-latest: html with four inlined local chapter scripts for isolated browser, simulated localStorage. All 120 checks observed to pass in CI log."
 }
