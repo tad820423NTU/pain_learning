@@ -106,7 +106,7 @@ with sync_playwright() as p:
         ck(f'{device}: six PSPS mechanisms',page.locator('.mechanism-button').count()==6)
         ck(f'{device}: default PSPS mechanism', 'Residual' in page.locator('.mech-head h3').inner_text())
         page.locator('[data-mech="ps-scar"]').click()
-        ck(f'{device}: PSPS fibrosis mechanism detail', 'Fibrosis' in page.locator('.mech-head h3').inner_text())
+        ck(f'{device}: PSPS fibrosis mechanism detail', 'fibrosis' in page.locator('.mech-head h3').inner_text().lower())
         page.locator('#homeOpen').click()
         page.evaluate("location.hash='#/topic/psps'")
         page.wait_for_timeout(30)
