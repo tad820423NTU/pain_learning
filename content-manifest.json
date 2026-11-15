@@ -56,6 +56,24 @@
       "notion_status": "待精讀"
     },
     {
+      "id": "oih",
+      "name": "Opioid Tolerance & OIH",
+      "status": "guided-lessons-available; clinician-full-review-pending",
+      "modules": 12,
+      "learning_stages_each": 4,
+      "interactive_mechanisms": 6,
+      "notion_status": "待精讀"
+    },
+    {
+      "id": "reg",
+      "name": "Taiwan Opioid Regulation",
+      "status": "official-claims-checked; legal-review-pending",
+      "modules": 13,
+      "learning_stages_each": 4,
+      "interactive_mechanisms": 6,
+      "notion_status": "待精讀"
+    },
+    {
       "id": "basics",
       "name": "Pain Neurobiology",
       "status": "introductory-guided-lessons",
@@ -64,7 +82,7 @@
     }
   ],
   "quality_gates": {
-    "browser_automated_tests": "GitHub Actions run 43703695323 Playwright Chromium: 120 passed, 0 failed (2026-11-15)",
+    "browser_automated_tests": "Prior 120 passing; new 156-check CI submitted and pending observed result",
     "critical_evidence_cross_checks": "Prior nine historical checks + PSPS/MPS key claim-level source verification (see QA_REPORT.md); full clinician review pending",
     "entire_content_clinician-reviewed": false,
     "entire_content_clinician_reviewed": false
@@ -73,8 +91,8 @@
   "homepage": {
     "enabled": true,
     "catalog_topics": 26,
-    "available_interactive_topics": 7,
-    "planned_topics": 19,
+    "available_interactive_topics": 9,
+    "planned_topics": 17,
     "shareable_routes": [
       "#/topic/crps",
       "#/topic/phn",
@@ -82,9 +100,12 @@
       "#/topic/psps",
       "#/topic/fibro",
       "#/topic/mps",
+      "#/topic/oih",
+      "#/topic/reg",
       "#/topic/basics"
     ]
   },
   "workflow_file": "WORKFLOW.md",
-  "last_ui_update": "2026-11-15"
+  "last_ui_update": "2026-11-15",
+  "regulatory_source_checked": "TFDA 2022, Taiwan Controlled Drugs Act, CDC 2022, Canada 2017, NICE NG193 2021; checked 2026-11-15; verify before actual prescribing"
 }
