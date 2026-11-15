@@ -37,3 +37,13 @@
 - GitHub 新增 chapters/psps2.js、chapters/mps.js，各 12 個四階段單元與六機轉。首頁更新 7 個可閱讀課程、19 個規劃中主題，深連結 #/topic/psps、#/topic/mps。
 - PSPS2 結合 PROCESS RCT vs 2023 Cochrane sham evidence 的 PICO 差異；MPS 區分觸診共識、可靠度及注射/乾針療效。
 - 新版 GitHub Actions Playwright 設計 120 項回歸測試，以實際日誌判定通過；仍為醫學公開試讀、非全面專家驗證。
+
+## 2026-11-15 — Opioid Tolerance/OIH 與 Taiwan Opioid Regulation
+
+- 完成既有 Notion 兩篇大綱的正式正文：OIH 12 章、法規與國際比較13章，各6機轉／制度節點、5份核心原始研究或官方法源、5題四選一含摺疊解析。Notion 均待精讀、掌握度未評估。
+- 新增 chapters/oih.js（12×4 learning stages）、chapters/reg.js（13×4 learning stages），接入七個舊課程但不改變舊 storage keys。
+- 首頁從7個可讀主題增至9個，規劃中17個；公開深連結 #/topic/oih 與 #/topic/reg。
+- 醫學上區分 opioid tolerance／withdrawal／OUD／OIH；RVM/NMDA/HCN2 的 preclinical evidence 不等於臨床診斷。
+- 台灣法律與行政指引及國際 CDC 2022／Canada 2017／NICE 2021 分別標示來源與適用族群。TFDA 2022 100 MEDD 為審慎重新評估參考，不是法律硬上限。
+- Playwright 三種 viewport 跨七個舊課程與兩篇新課程，預計156項；最終以 GitHub Actions 事實結果為準。
+- 全篇的台灣藥品逐品項仿單與健保給付、最新法規修訂及外部法律/醫師完整審查仍待核對，維持 public-preview status。
