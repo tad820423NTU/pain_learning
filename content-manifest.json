@@ -82,7 +82,7 @@
     }
   ],
   "quality_gates": {
-    "browser_automated_tests": "2026-11-20 GitHub Actions run 44686563119: 180 passed, 0 failed; 8 atlases × 3 viewports layout geometry verified",
+    "browser_automated_tests": "2026-11-20 GitHub Actions run 44702850600: 285 passed, 0 failed; 35 evidence cards tested at 3 viewport widths",
     "critical_evidence_cross_checks": "Prior nine historical checks + PSPS/MPS key claim-level source verification (see QA_REPORT.md); full clinician review pending",
     "entire_content_clinician-reviewed": false,
     "entire_content_clinician_reviewed": false,
@@ -108,5 +108,32 @@
   },
   "workflow_file": "WORKFLOW.md",
   "last_ui_update": "2026-11-20",
-  "regulatory_source_checked": "TFDA 2022, Taiwan Controlled Drugs Act, CDC 2022, Canada 2017, NICE NG193 2021; checked 2026-11-15; verify before actual prescribing"
+  "regulatory_source_checked": "TFDA 2022, Taiwan Controlled Drugs Act, CDC 2022, Canada 2017, NICE NG193 2021; checked 2026-11-15; verify before actual prescribing",
+  "evidence_cards": {
+    "topic_ids": [
+      "crps",
+      "phn",
+      "tn",
+      "fibro",
+      "psps",
+      "mps",
+      "oih"
+    ],
+    "papers_per_topic": 5,
+    "total_papers": 35,
+    "fields": [
+      "full_title",
+      "authors",
+      "journal",
+      "year",
+      "study_type",
+      "study_design",
+      "findings",
+      "limitations",
+      "doi"
+    ],
+    "status": "published-public-preview",
+    "regulatory_policy_exempt": true,
+    "pain_neurobiology_exempt": true
+  }
 }
