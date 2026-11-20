@@ -1,5 +1,15 @@
 # Pain Study Room｜品質稽核與驗收
 
+## 2026-11-20｜Mechanism Atlas 排版統一
+
+- **問題來源**：PHN/CRPS 使用具兩欄樣式的 `.mechanism-grid`；較新 TN、PSPS、Fibromyalgia、MPS、OIH、Taiwan regulation 使用未設定 grid 的 `.mechanism-map`，因此按鈕呈現不整齊的單欄清單。
+- **修正範圍**：只調整共用 CSS，兩種 class 現在共用 grid spacing/兩欄等寬樣式；新增機轉按鈕自動顯示 01–06 編號。桌機和平板為 2×3，窄手機（≤520px）採 1×6 以維持可讀性。保留 active/hover/focus 狀態及 detail panel。
+- **實際 QA**：2026-11-20 GitHub Actions [run #44686563119](https://github.com/tad820423NTU/pain_learning/actions/runs/44686563119) 已回報 **180 項通過、0 項失敗**。除原 156 項之外，新增八個 mechanism/policy atlas × 三個 viewport 的 geometry checks，確認欄數、等寬、行列對齊。
+- **內容保護**：未修改任何章節的醫學文字、機轉解說、Notion 正文或閱讀進度鍵。這次是視覺與操作回歸測試，**不是重新進行醫學準確性驗證**。
+- **限制**：CI 使用獨立 Chromium 測試環境與 localStorage 模擬，不等於已在所有真實瀏覽器或 GitHub Pages 網域完成跨裝置實測。
+
+---
+
 ## 2026-11-15｜Opioid tolerance & OIH / Taiwan Opioid Regulation
 
 - **Notion read-back**：OIH 12 專題章、法規與國際比較 13 章，兩篇均為六個獨立機轉／規範節點、5份核對來源卡、5題四選一病例含 5 個答案摺疊，待精讀、掌握度未評估。公開網站 OIH 12×4、Taiwan regulation 13×4 learning stages。
