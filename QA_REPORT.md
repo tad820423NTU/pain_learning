@@ -1,5 +1,15 @@
 # Pain Study Room｜品質稽核與驗收
 
+## 2026-11-20｜七個主題五篇原始文章的呈現更新
+
+- **範圍**：CRPS、PHN、Trigeminal Neuralgia、Fibromyalgia、PSPS Type 2／FBSS、Myofascial Pain Syndrome、Opioid tolerance & OIH；每章五篇，**共 35 篇**。
+- **原始來源**：依既有 Notion「一直複習」之各章 Paper 1–5 證據卡擷取完整文章標題、作者、期刊年份、研究方法、關鍵結果及限制。所有 DOI 使用網站原本的五篇連結，**未更換任何文章或 DOI**；另對數篇最新原文做抽查。
+- **版型**：七章原本第二階段的「延伸五篇 DOI」改為可摺疊文章卡，顯示研究類型、文章標題、完整 bibliographic heading、重點與限制、原文 DOI。只新增 `paper-collection` 範圍的 CSS；其他學習內容、步驟、機轉、個人筆記、進度鍵及 Notion 未更動。Taiwan Opioid Regulation、Pain Neurobiology 原樣保留。
+- **自動化驗證**：GitHub Actions [run #44702850600](https://github.com/tad820423NTU/pain_learning/actions/runs/44702850600)，**285 項通過，0 失敗**。涵蓋舊版 180 項，以及 7 主題 × 3 viewport × 5 類文章檢查。第一輪曾因 CRPS 統計字元 `P < 0.001` escape 不當造成 JS 語法錯誤；已修復並重測通過。
+- **限制**：自動化瀏覽器測試使用 in-memory localStorage shim，不能代替正式網址上的所有裝置測試。文獻顯示重排**並非醫學全文的重新驗證**，仍需獨立臨床專家與最新藥品仿單複核。
+
+---
+
 ## 2026-11-20｜Mechanism Atlas 排版統一
 
 - **問題來源**：PHN/CRPS 使用具兩欄樣式的 `.mechanism-grid`；較新 TN、PSPS、Fibromyalgia、MPS、OIH、Taiwan regulation 使用未設定 grid 的 `.mechanism-map`，因此按鈕呈現不整齊的單欄清單。
