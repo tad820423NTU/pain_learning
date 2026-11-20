@@ -47,3 +47,9 @@
 - 台灣法律與行政指引及國際 CDC 2022／Canada 2017／NICE 2021 分別標示來源與適用族群。TFDA 2022 100 MEDD 為審慎重新評估參考，不是法律硬上限。
 - Playwright 三種 viewport 跨七個舊課程與兩篇新課程，預計156項；最終以 GitHub Actions 事實結果為準。
 - 全篇的台灣藥品逐品項仿單與健保給付、最新法規修訂及外部法律/醫師完整審查仍待核對，維持 public-preview status。
+
+## 2026-11-20 — Unified Mechanism Atlas layout
+
+- 以 PHN 的 2×3 等寬 Mechanism Atlas 作為全部八個圖譜的共通樣式；補上 `.mechanism-map` 的 grid 排版、01–06 視覺編號、按鈕 hover/focus 與手機單欄規則。
+- 擴充 Playwright QA：八個圖譜在桌機、平板與手機均加入欄數／等寬／對齊檢查，GitHub Actions [run #44686563119](https://github.com/tad820423NTU/pain_learning/actions/runs/44686563119) **180/180 通過**。
+- 只修改網站的 CSS、回歸測試與維護文件，保留九個主題的醫學內容、課程資料和閱讀進度。
