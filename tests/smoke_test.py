@@ -185,6 +185,23 @@ with sync_playwright() as p:
         ck(f'{device}: Regulation deep link',page.locator('#lessonView').is_visible() and page.locator('#navList .nav-item').count()==13)
         page.locator('#homeOpen').click()
         ck(f'{device}: Regulation return home',page.locator('#homeView').is_visible())
+        # Seven literature panels (five articles each), while regulation and basics stay unchanged.
+        for evidence_id, evidence_index in [('crps',10),('phn',11),('tn',10),
+                                            ('fibro',10),('psps',10),('mps',10),('oih',10)]:
+            page.evaluate("(topic) => { location.hash = '#/topic/' + topic }",evidence_id)
+            page.wait_for_timeout(50)
+            page.locator(f'#navList button[data-nav="{evidence_index}"]').click()
+            page.locator('#nextBtn').click()
+            panel=page.locator('#stageContent details.paper-collection')
+            ck(f'{device}: {evidence_id} literature panel present',panel.count()==1)
+            panel.locator('summary').click()
+            card=page.locator('#stageContent .paper-collection .paper-card')
+            ck(f'{device}: {evidence_id} five article cards',card.count()==5 and card.first.is_visible())
+            ck(f'{device}: {evidence_id} article metadata',page.locator('#stageContent .paper-card .paper-title').count()==5 and page.locator('#stageContent .paper-card .paper-type').count()==5 and page.locator('#stageContent .paper-card .paper-meta').count()==5)
+            ck(f'{device}: {evidence_id} findings and limitations',page.locator('#stageContent .paper-card .paper-finding').count()==5 and page.locator('#stageContent .paper-card .paper-limits').count()==5)
+            doi_links=page.locator('#stageContent .paper-card a.paper-doi')
+            ck(f'{device}: {evidence_id} five DOI links',doi_links.count()==5 and all((doi_links.nth(n).get_attribute('href') or '').startswith('https://doi.org/') for n in range(5)))
+        page.locator('#homeOpen').click()
         page.locator('#homeFeatured [data-home-topic="basics"]').click()
         ck(f'{device}: basics 4 guided modules',page.locator('#lessonView').is_visible() and page.locator('#navList .nav-item').count()==4)
         page.locator('#homeOpen').click()
@@ -200,7 +217,7 @@ ck('static: no remote JS dependency',not re.search(r'<script[^>]+src=[\x22\x27]h
 ck('static: 4 learning stages preserved',"const stages=['先建立概念','拆解原理','帶到臨床','讀後整理'];" in html)
 ck('static: no user identifiable string',not any(s in html for s in ['家豪','Chia-Hao','亞東醫院','病歷號','病人姓名']))
 
-report={'date':'2026-11-15','passed':sum(x['pass'] for x in checks),'failed':sum(not x['pass'] for x in checks),'checks':checks,'full_medical_review_completed':False,'live_pages_browser_check_completed':False,'scope':'Local Chromium smoke tests, with test-only in-memory storage shim'}
+report={'date':'2026-11-20','passed':sum(x['pass'] for x in checks),'failed':sum(not x['pass'] for x in checks),'checks':checks,'full_medical_review_completed':False,'live_pages_browser_check_completed':False,'scope':'Local Chromium smoke tests, with test-only in-memory storage shim'}
 (root/'qa-results.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 print(f"Passed {report['passed']}; failed {report['failed']}")
 if report['failed']:raise SystemExit(1)
