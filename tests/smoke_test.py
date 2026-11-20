@@ -35,6 +35,28 @@ def ck(name,condition):
     checks.append({'check':name,'pass':bool(condition)})
     if not condition:print('FAIL',name)
 
+def atlas_layout_ok(page,width):
+    """The six Mechanism Atlas buttons must form PHN-style equal-width columns.
+    At <=520px they become a deliberate one-column mobile layout.
+    """
+    buttons=page.locator('#stageContent .mechanism-button')
+    if buttons.count()!=6:
+        return False
+    boxes=[buttons.nth(i).bounding_box() for i in range(6)]
+    if any(b is None for b in boxes):
+        return False
+    if max(b['width'] for b in boxes)-min(b['width'] for b in boxes)>2:
+        return False
+    if width<=520:
+        return (all(abs(b['x']-boxes[0]['x'])<2 for b in boxes)
+                and all(boxes[i+1]['y']>boxes[i]['y'] for i in range(5)))
+    return (abs(boxes[0]['y']-boxes[1]['y'])<2
+            and abs(boxes[0]['x']-boxes[2]['x'])<2
+            and abs(boxes[1]['x']-boxes[3]['x'])<2
+            and boxes[2]['y']>boxes[0]['y']
+            and abs(boxes[0]['height']-boxes[1]['height'])<2)
+
+
 with sync_playwright() as p:
     opts={'headless':True,'args':['--no-sandbox','--disable-dev-shm-usage']}
     if os.path.exists('/usr/bin/chromium'):opts['executable_path']='/usr/bin/chromium'
@@ -67,6 +89,7 @@ with sync_playwright() as p:
         page.locator('#navList button[data-nav="2"]').click()
         page.locator('#nextBtn').click()
         ck(f'{device}: six CRPS mechanisms',page.locator('.mechanism-button').count()==6)
+        ck(f'{device}: CRPS PHN-style atlas layout',atlas_layout_ok(page,width))
         page.locator('[data-mech="central"]').click()
         ck(f'{device}: CRPS mechanism detail','central' in page.locator('.mech-head h3').inner_text().lower())
         page.locator('#homeOpen').click()
@@ -80,6 +103,7 @@ with sync_playwright() as p:
         page.locator('#navList button[data-nav="2"]').click()
         page.locator('#nextBtn').click()
         ck(f'{device}: six PHN mechanisms',page.locator('.mechanism-button').count()==6)
+        ck(f'{device}: PHN PHN-style atlas layout',atlas_layout_ok(page,width))
         page.locator('[data-mech="phn-central"]').click()
         ck(f'{device}: PHN mechanism detail','central' in page.locator('.mech-head h3').inner_text().lower())
         page.locator('#homeOpen').click()
@@ -88,6 +112,7 @@ with sync_playwright() as p:
         page.locator('#navList button[data-nav="2"]').click()
         page.locator('#nextBtn').click()
         ck(f'{device}: six TN mechanisms',page.locator('.mechanism-button').count()==6)
+        ck(f'{device}: TN PHN-style atlas layout',atlas_layout_ok(page,width))
         page.locator('[data-mech="tn-ephaptic"]').click()
         ck(f'{device}: TN mechanism detail','Ephaptic' in page.locator('.mech-head h3').inner_text())
         page.locator('#homeOpen').click()
@@ -96,6 +121,7 @@ with sync_playwright() as p:
         page.locator('#navList button[data-nav="2"]').click()
         page.locator('#nextBtn').click()
         ck(f'{device}: six Fibromyalgia mechanisms',page.locator('.mechanism-button').count()==6)
+        ck(f'{device}: Fibromyalgia PHN-style atlas layout',atlas_layout_ok(page,width))
         page.locator('[data-mech="fm-small"]').click()
         ck(f'{device}: Fibromyalgia mechanism detail','Small-fiber' in page.locator('.mech-head h3').inner_text())
         page.locator('#homeOpen').click()
@@ -104,6 +130,7 @@ with sync_playwright() as p:
         page.locator('#navList button[data-nav="2"]').click()
         page.locator('#nextBtn').click()
         ck(f'{device}: six PSPS mechanisms',page.locator('.mechanism-button').count()==6)
+        ck(f'{device}: PSPS PHN-style atlas layout',atlas_layout_ok(page,width))
         ck(f'{device}: default PSPS mechanism', 'Residual' in page.locator('.mech-head h3').inner_text())
         page.locator('[data-mech="ps-scar"]').click()
         ck(f'{device}: PSPS fibrosis mechanism detail', 'fibrosis' in page.locator('.mech-head h3').inner_text().lower())
@@ -118,6 +145,7 @@ with sync_playwright() as p:
         page.locator('#navList button[data-nav="2"]').click()
         page.locator('#nextBtn').click()
         ck(f'{device}: six MPS mechanisms',page.locator('.mechanism-button').count()==6)
+        ck(f'{device}: MPS PHN-style atlas layout',atlas_layout_ok(page,width))
         ck(f'{device}: default MPS mechanism', 'Motor endplate' in page.locator('.mech-head h3').inner_text())
         page.locator('[data-mech="mps-referral"]').click()
         ck(f'{device}: MPS referred pain mechanism detail', 'Referred pain' in page.locator('.mech-head h3').inner_text())
@@ -132,6 +160,7 @@ with sync_playwright() as p:
         page.locator('#navList button[data-nav="2"]').click()
         page.locator('#nextBtn').click()
         ck(f'{device}: OIH six mechanisms',page.locator('.mechanism-button').count()==6)
+        ck(f'{device}: OIH PHN-style atlas layout',atlas_layout_ok(page,width))
         ck(f'{device}: OIH default MOR mechanism','MOR' in page.locator('.mech-head h3').inner_text())
         page.locator('[data-mech="oih-hcn"]').click()
         ck(f'{device}: OIH HCN mechanism detail','HCN2' in page.locator('.mech-head h3').inner_text())
@@ -146,6 +175,7 @@ with sync_playwright() as p:
         page.locator('#navList button[data-nav="2"]').click()
         page.locator('#nextBtn').click()
         ck(f'{device}: Regulation six policy nodes',page.locator('.mechanism-button').count()==6)
+        ck(f'{device}: Regulation PHN-style atlas layout',atlas_layout_ok(page,width))
         ck(f'{device}: Regulation default hierarchy', 'Regulatory hierarchy' in page.locator('.mech-head h3').inner_text())
         page.locator('[data-mech="reg-days"]').click()
         ck(f'{device}: Regulation time limits','Clinical duration' in page.locator('.mech-head h3').inner_text())
