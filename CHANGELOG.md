@@ -53,3 +53,10 @@
 - 以 PHN 的 2×3 等寬 Mechanism Atlas 作為全部八個圖譜的共通樣式；補上 `.mechanism-map` 的 grid 排版、01–06 視覺編號、按鈕 hover/focus 與手機單欄規則。
 - 擴充 Playwright QA：八個圖譜在桌機、平板與手機均加入欄數／等寬／對齊檢查，GitHub Actions [run #44686563119](https://github.com/tad820423NTU/pain_learning/actions/runs/44686563119) **180/180 通過**。
 - 只修改網站的 CSS、回歸測試與維護文件，保留九個主題的醫學內容、課程資料和閱讀進度。
+
+## 2026-11-20 — Evidence article cards across seven topics
+
+- 更新 CRPS、PHN、TN、Fibromyalgia、PSPS2、MPS、Opioid tolerance & OIH 的五篇文獻區塊，35 篇文章統一呈現完整英文標題、作者期刊年份、研究類型、研究結果/限制與原始 DOI。
+- 保留所有既有 DOI 及其他教材、機轉、章節順序、筆記與進度鍵。Taiwan Opioid Regulation 及 Pain Neurobiology 沒有改動。
+- 新增 evidence-card 專屬 CSS 與三種尺寸的文章展開／完整性／連結回歸測試；修復 CRPS P 值 less-than 比較符號的字元跳脫錯誤。
+- [GitHub Actions run #44702850600](https://github.com/tad820423NTU/pain_learning/actions/runs/44702850600) 驗證 **285/285 通過**；不是新的全篇醫學專家審查。
