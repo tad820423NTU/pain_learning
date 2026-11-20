@@ -82,10 +82,11 @@
     }
   ],
   "quality_gates": {
-    "browser_automated_tests": "Prior 120 passing; new 156-check CI submitted and pending observed result",
+    "browser_automated_tests": "2026-11-20 GitHub Actions run 44686563119: 180 passed, 0 failed; 8 atlases × 3 viewports layout geometry verified",
     "critical_evidence_cross_checks": "Prior nine historical checks + PSPS/MPS key claim-level source verification (see QA_REPORT.md); full clinician review pending",
     "entire_content_clinician-reviewed": false,
-    "entire_content_clinician_reviewed": false
+    "entire_content_clinician_reviewed": false,
+    "mechanism_atlas_layout": "PHN-style 2 columns at >520px, 1 column <=520px; 8 atlases geometry checked"
   },
   "notion_sync": "manual, assisted through ChatGPT; no automatic synchronisation",
   "homepage": {
@@ -106,6 +107,6 @@
     ]
   },
   "workflow_file": "WORKFLOW.md",
-  "last_ui_update": "2026-11-15",
+  "last_ui_update": "2026-11-20",
   "regulatory_source_checked": "TFDA 2022, Taiwan Controlled Drugs Act, CDC 2022, Canada 2017, NICE NG193 2021; checked 2026-11-15; verify before actual prescribing"
 }
