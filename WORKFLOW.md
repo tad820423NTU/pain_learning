@@ -37,6 +37,13 @@
 - 不因統一樣式刪減 mechanisms 的內容或例子；只改變按鈕的排列與點選後的解說容器。新課程應沿用該 UI 與共通的 `showMechanism` 行為。
 - 回歸測試必須實際驗證每個 Atlas 的 **computed geometry**（欄數、按鈕等寬與對齊），而不只檢查「有六個按鈕」。同時核對 active state、detail text、無水平溢出及 notes/progress 原狀。
 
+### 五篇核心文獻的固定顯示標準（2026-11-20）
+
+- 疾病與藥理教學章節的五篇 Key Evidence，在**第二階段**提供一個預設收合的「延伸：五篇核心文章」區塊，每篇均需顯示：**完整英文文章標題、作者、期刊、年份、研究類型、研究設計、核實的主要結果、證據限制與原始 DOI**。沿用 `paper-collection / paper-card` 版型；不可只列五個 DOI。
+- 內容從 Notion 對應的 Paper 1–5 原始證據卡同步，並針對 DOI / bibliographic metadata 查核。若尚未獲得可信來源核實，標示待查，不編造 effect size、作者或 DOI。
+- **Taiwan Opioid Regulation** 以官方法源與國際政策文件為主，無 DOI 的來源不能硬加 DOI；**Pain Neurobiology** 基礎導讀不強制五篇文章。
+- 視覺調整不得改動教學其他四階段、講義正文、使用者學習進度或 Notion 學習狀態。GitHub Actions 必須檢查各主題五張 article cards、可展開、標題/研究類型/結果/限制及每張 DOI 超連結。
+
 ## D. 統整和網站發布
 
 1. Notion 保存完整醫學正文，GitHub Pages 保存可公開互動導讀。兩者目前由 ChatGPT 對照同步，**並非自動即時雙向同步**。
