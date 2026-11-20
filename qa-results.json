@@ -1,9 +1,9 @@
 {
   "date": "2026-11-20",
   "source": "GitHub Actions Playwright Chromium",
-  "run_id": 44686563119,
-  "run_url": "https://github.com/tad820423NTU/pain_learning/actions/runs/44686563119",
-  "passed": 180,
+  "run_id": 44702850600,
+  "run_url": "https://github.com/tad820423NTU/pain_learning/actions/runs/44702850600",
+  "passed": 285,
   "failed": 0,
   "checks": [
     {
@@ -224,6 +224,146 @@
     },
     {
       "check": "desktop: Regulation return home",
+      "pass": true
+    },
+    {
+      "check": "desktop: crps literature panel present",
+      "pass": true
+    },
+    {
+      "check": "desktop: phn literature panel present",
+      "pass": true
+    },
+    {
+      "check": "desktop: tn literature panel present",
+      "pass": true
+    },
+    {
+      "check": "desktop: fibro literature panel present",
+      "pass": true
+    },
+    {
+      "check": "desktop: psps literature panel present",
+      "pass": true
+    },
+    {
+      "check": "desktop: mps literature panel present",
+      "pass": true
+    },
+    {
+      "check": "desktop: oih literature panel present",
+      "pass": true
+    },
+    {
+      "check": "desktop: crps five article cards",
+      "pass": true
+    },
+    {
+      "check": "desktop: phn five article cards",
+      "pass": true
+    },
+    {
+      "check": "desktop: tn five article cards",
+      "pass": true
+    },
+    {
+      "check": "desktop: fibro five article cards",
+      "pass": true
+    },
+    {
+      "check": "desktop: psps five article cards",
+      "pass": true
+    },
+    {
+      "check": "desktop: mps five article cards",
+      "pass": true
+    },
+    {
+      "check": "desktop: oih five article cards",
+      "pass": true
+    },
+    {
+      "check": "desktop: crps article metadata",
+      "pass": true
+    },
+    {
+      "check": "desktop: phn article metadata",
+      "pass": true
+    },
+    {
+      "check": "desktop: tn article metadata",
+      "pass": true
+    },
+    {
+      "check": "desktop: fibro article metadata",
+      "pass": true
+    },
+    {
+      "check": "desktop: psps article metadata",
+      "pass": true
+    },
+    {
+      "check": "desktop: mps article metadata",
+      "pass": true
+    },
+    {
+      "check": "desktop: oih article metadata",
+      "pass": true
+    },
+    {
+      "check": "desktop: crps findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "desktop: phn findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "desktop: tn findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "desktop: fibro findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "desktop: psps findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "desktop: mps findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "desktop: oih findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "desktop: crps five DOI links",
+      "pass": true
+    },
+    {
+      "check": "desktop: phn five DOI links",
+      "pass": true
+    },
+    {
+      "check": "desktop: tn five DOI links",
+      "pass": true
+    },
+    {
+      "check": "desktop: fibro five DOI links",
+      "pass": true
+    },
+    {
+      "check": "desktop: psps five DOI links",
+      "pass": true
+    },
+    {
+      "check": "desktop: mps five DOI links",
+      "pass": true
+    },
+    {
+      "check": "desktop: oih five DOI links",
       "pass": true
     },
     {
@@ -459,6 +599,146 @@
       "pass": true
     },
     {
+      "check": "tablet: crps literature panel present",
+      "pass": true
+    },
+    {
+      "check": "tablet: phn literature panel present",
+      "pass": true
+    },
+    {
+      "check": "tablet: tn literature panel present",
+      "pass": true
+    },
+    {
+      "check": "tablet: fibro literature panel present",
+      "pass": true
+    },
+    {
+      "check": "tablet: psps literature panel present",
+      "pass": true
+    },
+    {
+      "check": "tablet: mps literature panel present",
+      "pass": true
+    },
+    {
+      "check": "tablet: oih literature panel present",
+      "pass": true
+    },
+    {
+      "check": "tablet: crps five article cards",
+      "pass": true
+    },
+    {
+      "check": "tablet: phn five article cards",
+      "pass": true
+    },
+    {
+      "check": "tablet: tn five article cards",
+      "pass": true
+    },
+    {
+      "check": "tablet: fibro five article cards",
+      "pass": true
+    },
+    {
+      "check": "tablet: psps five article cards",
+      "pass": true
+    },
+    {
+      "check": "tablet: mps five article cards",
+      "pass": true
+    },
+    {
+      "check": "tablet: oih five article cards",
+      "pass": true
+    },
+    {
+      "check": "tablet: crps article metadata",
+      "pass": true
+    },
+    {
+      "check": "tablet: phn article metadata",
+      "pass": true
+    },
+    {
+      "check": "tablet: tn article metadata",
+      "pass": true
+    },
+    {
+      "check": "tablet: fibro article metadata",
+      "pass": true
+    },
+    {
+      "check": "tablet: psps article metadata",
+      "pass": true
+    },
+    {
+      "check": "tablet: mps article metadata",
+      "pass": true
+    },
+    {
+      "check": "tablet: oih article metadata",
+      "pass": true
+    },
+    {
+      "check": "tablet: crps findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "tablet: phn findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "tablet: tn findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "tablet: fibro findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "tablet: psps findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "tablet: mps findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "tablet: oih findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "tablet: crps five DOI links",
+      "pass": true
+    },
+    {
+      "check": "tablet: phn five DOI links",
+      "pass": true
+    },
+    {
+      "check": "tablet: tn five DOI links",
+      "pass": true
+    },
+    {
+      "check": "tablet: fibro five DOI links",
+      "pass": true
+    },
+    {
+      "check": "tablet: psps five DOI links",
+      "pass": true
+    },
+    {
+      "check": "tablet: mps five DOI links",
+      "pass": true
+    },
+    {
+      "check": "tablet: oih five DOI links",
+      "pass": true
+    },
+    {
       "check": "tablet: basics 4 guided modules",
       "pass": true
     },
@@ -691,6 +971,146 @@
       "pass": true
     },
     {
+      "check": "mobile: crps literature panel present",
+      "pass": true
+    },
+    {
+      "check": "mobile: phn literature panel present",
+      "pass": true
+    },
+    {
+      "check": "mobile: tn literature panel present",
+      "pass": true
+    },
+    {
+      "check": "mobile: fibro literature panel present",
+      "pass": true
+    },
+    {
+      "check": "mobile: psps literature panel present",
+      "pass": true
+    },
+    {
+      "check": "mobile: mps literature panel present",
+      "pass": true
+    },
+    {
+      "check": "mobile: oih literature panel present",
+      "pass": true
+    },
+    {
+      "check": "mobile: crps five article cards",
+      "pass": true
+    },
+    {
+      "check": "mobile: phn five article cards",
+      "pass": true
+    },
+    {
+      "check": "mobile: tn five article cards",
+      "pass": true
+    },
+    {
+      "check": "mobile: fibro five article cards",
+      "pass": true
+    },
+    {
+      "check": "mobile: psps five article cards",
+      "pass": true
+    },
+    {
+      "check": "mobile: mps five article cards",
+      "pass": true
+    },
+    {
+      "check": "mobile: oih five article cards",
+      "pass": true
+    },
+    {
+      "check": "mobile: crps article metadata",
+      "pass": true
+    },
+    {
+      "check": "mobile: phn article metadata",
+      "pass": true
+    },
+    {
+      "check": "mobile: tn article metadata",
+      "pass": true
+    },
+    {
+      "check": "mobile: fibro article metadata",
+      "pass": true
+    },
+    {
+      "check": "mobile: psps article metadata",
+      "pass": true
+    },
+    {
+      "check": "mobile: mps article metadata",
+      "pass": true
+    },
+    {
+      "check": "mobile: oih article metadata",
+      "pass": true
+    },
+    {
+      "check": "mobile: crps findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "mobile: phn findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "mobile: tn findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "mobile: fibro findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "mobile: psps findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "mobile: mps findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "mobile: oih findings and limitations",
+      "pass": true
+    },
+    {
+      "check": "mobile: crps five DOI links",
+      "pass": true
+    },
+    {
+      "check": "mobile: phn five DOI links",
+      "pass": true
+    },
+    {
+      "check": "mobile: tn five DOI links",
+      "pass": true
+    },
+    {
+      "check": "mobile: fibro five DOI links",
+      "pass": true
+    },
+    {
+      "check": "mobile: psps five DOI links",
+      "pass": true
+    },
+    {
+      "check": "mobile: mps five DOI links",
+      "pass": true
+    },
+    {
+      "check": "mobile: oih five DOI links",
+      "pass": true
+    },
+    {
       "check": "mobile: basics 4 guided modules",
       "pass": true
     },
@@ -729,5 +1149,5 @@
   ],
   "full_medical_review_completed": false,
   "live_pages_browser_check_completed": false,
-  "scope": "GitHub Actions CI with inlined local chapter scripts and a test-only in-memory localStorage shim; 1440/768/390 viewport geometry measured for all 8 interactive six-node atlases."
+  "scope": "CI testing: 3 viewport sizes, seven evidence panels × five article cards, metadata/findings/limits and original DOI link checks; uses inlined local chapter scripts and in-memory localStorage shim."
 }
