@@ -1,9 +1,9 @@
 {
-  "date": "2026-11-15",
+  "date": "2026-11-20",
   "source": "GitHub Actions Playwright Chromium",
-  "run_id": 43703695323,
-  "run_url": "https://github.com/tad820423NTU/pain_learning/actions/runs/43703695323",
-  "passed": 120,
+  "run_id": 44686563119,
+  "run_url": "https://github.com/tad820423NTU/pain_learning/actions/runs/44686563119",
+  "passed": 180,
   "failed": 0,
   "checks": [
     {
@@ -11,7 +11,7 @@
       "pass": true
     },
     {
-      "check": "desktop: seven available courses",
+      "check": "desktop: nine available courses",
       "pass": true
     },
     {
@@ -19,7 +19,7 @@
       "pass": true
     },
     {
-      "check": "desktop: exactly 19 planned topics",
+      "check": "desktop: exactly 17 planned topics",
       "pass": true
     },
     {
@@ -51,6 +51,10 @@
       "pass": true
     },
     {
+      "check": "desktop: CRPS PHN-style atlas layout",
+      "pass": true
+    },
+    {
       "check": "desktop: CRPS mechanism detail",
       "pass": true
     },
@@ -71,6 +75,10 @@
       "pass": true
     },
     {
+      "check": "desktop: PHN PHN-style atlas layout",
+      "pass": true
+    },
+    {
       "check": "desktop: PHN mechanism detail",
       "pass": true
     },
@@ -80,6 +88,10 @@
     },
     {
       "check": "desktop: six TN mechanisms",
+      "pass": true
+    },
+    {
+      "check": "desktop: TN PHN-style atlas layout",
       "pass": true
     },
     {
@@ -95,6 +107,10 @@
       "pass": true
     },
     {
+      "check": "desktop: Fibromyalgia PHN-style atlas layout",
+      "pass": true
+    },
+    {
       "check": "desktop: Fibromyalgia mechanism detail",
       "pass": true
     },
@@ -104,6 +120,10 @@
     },
     {
       "check": "desktop: six PSPS mechanisms",
+      "pass": true
+    },
+    {
+      "check": "desktop: PSPS PHN-style atlas layout",
       "pass": true
     },
     {
@@ -131,6 +151,10 @@
       "pass": true
     },
     {
+      "check": "desktop: MPS PHN-style atlas layout",
+      "pass": true
+    },
+    {
       "check": "desktop: default MPS mechanism",
       "pass": true
     },
@@ -144,6 +168,62 @@
     },
     {
       "check": "desktop: MPS return home",
+      "pass": true
+    },
+    {
+      "check": "desktop: OIH 12 modules",
+      "pass": true
+    },
+    {
+      "check": "desktop: OIH six mechanisms",
+      "pass": true
+    },
+    {
+      "check": "desktop: OIH PHN-style atlas layout",
+      "pass": true
+    },
+    {
+      "check": "desktop: OIH default MOR mechanism",
+      "pass": true
+    },
+    {
+      "check": "desktop: OIH HCN mechanism detail",
+      "pass": true
+    },
+    {
+      "check": "desktop: OIH deep link",
+      "pass": true
+    },
+    {
+      "check": "desktop: OIH return home",
+      "pass": true
+    },
+    {
+      "check": "desktop: Regulation 13 modules",
+      "pass": true
+    },
+    {
+      "check": "desktop: Regulation six policy nodes",
+      "pass": true
+    },
+    {
+      "check": "desktop: Regulation PHN-style atlas layout",
+      "pass": true
+    },
+    {
+      "check": "desktop: Regulation default hierarchy",
+      "pass": true
+    },
+    {
+      "check": "desktop: Regulation time limits",
+      "pass": true
+    },
+    {
+      "check": "desktop: Regulation deep link",
+      "pass": true
+    },
+    {
+      "check": "desktop: Regulation return home",
       "pass": true
     },
     {
@@ -163,7 +243,7 @@
       "pass": true
     },
     {
-      "check": "tablet: seven available courses",
+      "check": "tablet: nine available courses",
       "pass": true
     },
     {
@@ -171,7 +251,7 @@
       "pass": true
     },
     {
-      "check": "tablet: exactly 19 planned topics",
+      "check": "tablet: exactly 17 planned topics",
       "pass": true
     },
     {
@@ -203,6 +283,10 @@
       "pass": true
     },
     {
+      "check": "tablet: CRPS PHN-style atlas layout",
+      "pass": true
+    },
+    {
       "check": "tablet: CRPS mechanism detail",
       "pass": true
     },
@@ -223,6 +307,10 @@
       "pass": true
     },
     {
+      "check": "tablet: PHN PHN-style atlas layout",
+      "pass": true
+    },
+    {
       "check": "tablet: PHN mechanism detail",
       "pass": true
     },
@@ -232,6 +320,10 @@
     },
     {
       "check": "tablet: six TN mechanisms",
+      "pass": true
+    },
+    {
+      "check": "tablet: TN PHN-style atlas layout",
       "pass": true
     },
     {
@@ -247,6 +339,10 @@
       "pass": true
     },
     {
+      "check": "tablet: Fibromyalgia PHN-style atlas layout",
+      "pass": true
+    },
+    {
       "check": "tablet: Fibromyalgia mechanism detail",
       "pass": true
     },
@@ -256,6 +352,10 @@
     },
     {
       "check": "tablet: six PSPS mechanisms",
+      "pass": true
+    },
+    {
+      "check": "tablet: PSPS PHN-style atlas layout",
       "pass": true
     },
     {
@@ -283,6 +383,10 @@
       "pass": true
     },
     {
+      "check": "tablet: MPS PHN-style atlas layout",
+      "pass": true
+    },
+    {
       "check": "tablet: default MPS mechanism",
       "pass": true
     },
@@ -296,6 +400,62 @@
     },
     {
       "check": "tablet: MPS return home",
+      "pass": true
+    },
+    {
+      "check": "tablet: OIH 12 modules",
+      "pass": true
+    },
+    {
+      "check": "tablet: OIH six mechanisms",
+      "pass": true
+    },
+    {
+      "check": "tablet: OIH PHN-style atlas layout",
+      "pass": true
+    },
+    {
+      "check": "tablet: OIH default MOR mechanism",
+      "pass": true
+    },
+    {
+      "check": "tablet: OIH HCN mechanism detail",
+      "pass": true
+    },
+    {
+      "check": "tablet: OIH deep link",
+      "pass": true
+    },
+    {
+      "check": "tablet: OIH return home",
+      "pass": true
+    },
+    {
+      "check": "tablet: Regulation 13 modules",
+      "pass": true
+    },
+    {
+      "check": "tablet: Regulation six policy nodes",
+      "pass": true
+    },
+    {
+      "check": "tablet: Regulation PHN-style atlas layout",
+      "pass": true
+    },
+    {
+      "check": "tablet: Regulation default hierarchy",
+      "pass": true
+    },
+    {
+      "check": "tablet: Regulation time limits",
+      "pass": true
+    },
+    {
+      "check": "tablet: Regulation deep link",
+      "pass": true
+    },
+    {
+      "check": "tablet: Regulation return home",
       "pass": true
     },
     {
@@ -315,7 +475,7 @@
       "pass": true
     },
     {
-      "check": "mobile: seven available courses",
+      "check": "mobile: nine available courses",
       "pass": true
     },
     {
@@ -323,7 +483,7 @@
       "pass": true
     },
     {
-      "check": "mobile: exactly 19 planned topics",
+      "check": "mobile: exactly 17 planned topics",
       "pass": true
     },
     {
@@ -355,6 +515,10 @@
       "pass": true
     },
     {
+      "check": "mobile: CRPS PHN-style atlas layout",
+      "pass": true
+    },
+    {
       "check": "mobile: CRPS mechanism detail",
       "pass": true
     },
@@ -375,6 +539,10 @@
       "pass": true
     },
     {
+      "check": "mobile: PHN PHN-style atlas layout",
+      "pass": true
+    },
+    {
       "check": "mobile: PHN mechanism detail",
       "pass": true
     },
@@ -384,6 +552,10 @@
     },
     {
       "check": "mobile: six TN mechanisms",
+      "pass": true
+    },
+    {
+      "check": "mobile: TN PHN-style atlas layout",
       "pass": true
     },
     {
@@ -399,6 +571,10 @@
       "pass": true
     },
     {
+      "check": "mobile: Fibromyalgia PHN-style atlas layout",
+      "pass": true
+    },
+    {
       "check": "mobile: Fibromyalgia mechanism detail",
       "pass": true
     },
@@ -408,6 +584,10 @@
     },
     {
       "check": "mobile: six PSPS mechanisms",
+      "pass": true
+    },
+    {
+      "check": "mobile: PSPS PHN-style atlas layout",
       "pass": true
     },
     {
@@ -435,6 +615,10 @@
       "pass": true
     },
     {
+      "check": "mobile: MPS PHN-style atlas layout",
+      "pass": true
+    },
+    {
       "check": "mobile: default MPS mechanism",
       "pass": true
     },
@@ -448,6 +632,62 @@
     },
     {
       "check": "mobile: MPS return home",
+      "pass": true
+    },
+    {
+      "check": "mobile: OIH 12 modules",
+      "pass": true
+    },
+    {
+      "check": "mobile: OIH six mechanisms",
+      "pass": true
+    },
+    {
+      "check": "mobile: OIH PHN-style atlas layout",
+      "pass": true
+    },
+    {
+      "check": "mobile: OIH default MOR mechanism",
+      "pass": true
+    },
+    {
+      "check": "mobile: OIH HCN mechanism detail",
+      "pass": true
+    },
+    {
+      "check": "mobile: OIH deep link",
+      "pass": true
+    },
+    {
+      "check": "mobile: OIH return home",
+      "pass": true
+    },
+    {
+      "check": "mobile: Regulation 13 modules",
+      "pass": true
+    },
+    {
+      "check": "mobile: Regulation six policy nodes",
+      "pass": true
+    },
+    {
+      "check": "mobile: Regulation PHN-style atlas layout",
+      "pass": true
+    },
+    {
+      "check": "mobile: Regulation default hierarchy",
+      "pass": true
+    },
+    {
+      "check": "mobile: Regulation time limits",
+      "pass": true
+    },
+    {
+      "check": "mobile: Regulation deep link",
+      "pass": true
+    },
+    {
+      "check": "mobile: Regulation return home",
       "pass": true
     },
     {
@@ -489,5 +729,5 @@
   ],
   "full_medical_review_completed": false,
   "live_pages_browser_check_completed": false,
-  "scope": "GitHub Actions ubuntu-latest: html with four inlined local chapter scripts for isolated browser, simulated localStorage. All 120 checks observed to pass in CI log."
+  "scope": "GitHub Actions CI with inlined local chapter scripts and a test-only in-memory localStorage shim; 1440/768/390 viewport geometry measured for all 8 interactive six-node atlases."
 }
